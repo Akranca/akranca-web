@@ -1,0 +1,234 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="tr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Gizlilik Politikası | Akranca</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#21537f",
+                    "inverse-surface": "#28313c",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#d2dbe9",
+                    "surface-tint": "#32618f",
+                    "on-surface-variant": "#42474f",
+                    "on-secondary-container": "#754e00",
+                    "surface-container-low": "#eef4ff",
+                    "surface-variant": "#dae3f2",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#f1be6b",
+                    "surface-container": "#e5effd",
+                    "outline-variant": "#c2c7d0",
+                    "on-primary-container": "#dae9ff",
+                    "background": "#F4F6F8",
+                    "secondary": "#805600",
+                    "muted-text": "#707D83",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdeac",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#f9bc5c",
+                    "on-tertiary-container": "#ffe4bf",
+                    "primary-fixed-dim": "#9ecafe",
+                    "on-secondary": "#ffffff",
+                    "surface": "#FFFFFF",
+                    "primary-container": "#3d6b99",
+                    "on-primary-fixed": "#001d35",
+                    "on-background": "#131c26",
+                    "on-surface": "#131c26",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#281900",
+                    "surface-container-high": "#e0e9f7",
+                    "surface-bright": "#f8f9ff",
+                    "primary-fixed": "#d0e4ff",
+                    "tertiary-container": "#886116",
+                    "on-primary-fixed-variant": "#144975",
+                    "on-tertiary-fixed-variant": "#604100",
+                    "on-secondary-fixed-variant": "#614000",
+                    "secondary-container": "#ffc161",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#dae3f2",
+                    "secondary-fixed": "#ffddb0",
+                    "outline": "#727780",
+                    "on-secondary-fixed": "#281800",
+                    "inverse-primary": "#9ecafe",
+                    "tertiary": "#6c4a00",
+                    "inverse-on-surface": "#e9f1ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-padding": "80px",
+                    "stack-md": "16px",
+                    "margin-mobile": "20px",
+                    "container-max": "1200px",
+                    "gutter": "24px",
+                    "stack-sm": "8px",
+                    "margin-desktop": "64px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Space Grotesk"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-xl": ["Space Grotesk"],
+                    "headline-lg-mobile": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .duotone-overlay {
+            mix-blend-mode: multiply;
+            background-color: rgba(33, 83, 127, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20 bg-surface/90 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-stack-lg">
+<a class="font-headline-md text-headline-md font-bold text-primary cursor-pointer active:scale-95 duration-200" href="index.html"><div class="w-24">{{DATA:DOCUMENT:DOCUMENT_11}}</div></a>
+<nav class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:scale-95 duration-200" href="#">Hakkımızda</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:scale-95 duration-200" href="#">Sorun</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:scale-95 duration-200" href="#">Hizmetler</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:scale-95 duration-200" href="#">Topluluk</a>
+</nav>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="hidden lg:block font-label-md text-label-md text-on-surface-variant hover:opacity-80 transition-opacity cursor-pointer active:scale-95 duration-200 px-4 py-2">
+                Topluluğa Katıl
+            </button>
+<button class="bg-secondary text-on-secondary px-6 py-2.5 rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity shadow-sm cursor-pointer active:scale-95 duration-200">
+                Yardım Al
+            </button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="min-h-[70vh] flex flex-col items-center justify-center py-section-padding px-margin-mobile md:px-margin-desktop" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s ease-out, transform 0.6s ease-out;">
+<div class="max-w-container-max w-full">
+<div class="bg-surface-container-lowest p-stack-lg md:p-12 rounded-xl shadow-sm border border-outline-variant/30 text-center flex flex-col items-center">
+<!-- Icon Placeholder -->
+<div class="w-16 h-16 bg-primary-fixed flex items-center justify-center rounded-full mb-stack-lg">
+<span class="material-symbols-outlined text-primary text-3xl">lock</span>
+</div>
+<!-- Page Identity -->
+<h1 class="font-headline-xl text-headline-xl text-primary mb-stack-md">
+                    Gizlilik Politikası
+                </h1>
+<div class="w-24 h-1 bg-secondary rounded-full mb-stack-lg"></div>
+<!-- Status Indicator -->
+<div class="flex items-center gap-2 bg-tertiary-fixed px-4 py-2 rounded-full mb-stack-lg">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+<p class="font-label-md text-label-md text-on-tertiary-fixed">
+                        Hazırlanıyor...
+                    </p>
+</div>
+<!-- Descriptive Text -->
+<div class="max-w-2xl mx-auto">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Akranca topluluğunun güvenliği ve verilerinizin korunması bizim için en önemli önceliktir. Gizlilik politikamız şu anda uzman ekiplerimiz tarafından güncellenmektedir.
+                    </p>
+<p class="font-body-md text-body-md text-muted-text mt-stack-md">
+                        En kısa sürede şeffaf ve kapsamlı bir metin ile burada olacağız. Bu süreçte sorularınız için bizimle iletişime geçebilirsiniz.
+                    </p>
+</div>
+<!-- Back Action -->
+<div class="mt-12">
+<a class="inline-flex items-center gap-2 border border-primary text-primary px-8 py-3 rounded-lg font-label-md text-label-md hover:bg-primary-fixed transition-colors cursor-pointer active:scale-95 duration-200" href="index.html">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+                        Ana Sayfaya Dön
+                    </a>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-on-background py-section-padding">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Brand Column -->
+<div class="flex flex-col gap-stack-md">
+<div class="w-24 mb-2">{{DATA:DOCUMENT:DOCUMENT_4}}</div>
+<p class="font-body-md text-body-md text-surface-variant/80">
+                    Akran zorbalığına karşı profesyonel ve güvenli bir topluluk alanı.
+                </p>
+</div>
+<!-- Links 1 -->
+<div class="flex flex-col gap-stack-sm">
+<h4 class="font-label-md text-label-md text-surface-bright mb-2">Kurumsal</h4>
+<a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200" href="#">Hakkımızda</a>
+<a class="font-label-sm text-label-sm text-primary-fixed-dim inline-block hover:-translate-y-0.5 duration-200" href="#">Gizlilik Politikası</a>
+<a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200" href="#">Kullanım Koşulları</a>
+</div>
+<!-- Links 2 -->
+<div class="flex flex-col gap-stack-sm">
+<h4 class="font-label-md text-label-md text-surface-bright mb-2">Destek</h4>
+<a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200" href="#">İletişim</a>
+<a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200" href="#">SSS</a>
+<a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200" href="#">Yardım Merkezi</a>
+</div>
+<!-- Copyright -->
+<div class="flex flex-col gap-stack-md md:items-end md:text-right">
+<div class="flex gap-stack-sm">
+<span class="material-symbols-outlined text-surface-variant/60 cursor-pointer hover:text-white">share</span>
+<span class="material-symbols-outlined text-surface-variant/60 cursor-pointer hover:text-white">public</span>
+</div>
+<p class="font-label-sm text-label-sm text-surface-variant/60">
+                    © 2024 Akranca. Tüm hakları saklıdır.
+                </p>
+</div>
+</div>
+</footer>
+<!-- Micro-interaction for smooth fade in -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mainContent = document.querySelector('main');
+            mainContent.style.opacity = '0';
+            mainContent.style.transform = 'translateY(20px)';
+            mainContent.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            
+            setTimeout(() => {
+                mainContent.style.opacity = '1';
+                mainContent.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+
+
+</body></html>

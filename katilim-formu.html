@@ -1,0 +1,316 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="tr" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Akranca'ya Katıl | Akran Zorbalığına Karşı Birlikte</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#21537f",
+                    "inverse-surface": "#28313c",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#d2dbe9",
+                    "surface-tint": "#32618f",
+                    "on-surface-variant": "#42474f",
+                    "on-secondary-container": "#754e00",
+                    "surface-container-low": "#eef4ff",
+                    "surface-variant": "#dae3f2",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#f1be6b",
+                    "surface-container": "#e5effd",
+                    "outline-variant": "#c2c7d0",
+                    "on-primary-container": "#dae9ff",
+                    "background": "#F4F6F8",
+                    "secondary": "#805600",
+                    "muted-text": "#707D83",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdeac",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#f9bc5c",
+                    "on-tertiary-container": "#ffe4bf",
+                    "primary-fixed-dim": "#9ecafe",
+                    "on-secondary": "#ffffff",
+                    "surface": "#FFFFFF",
+                    "primary-container": "#3d6b99",
+                    "on-primary-fixed": "#001d35",
+                    "on-background": "#131c26",
+                    "on-surface": "#131c26",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#281900",
+                    "surface-container-high": "#e0e9f7",
+                    "surface-bright": "#f8f9ff",
+                    "primary-fixed": "#d0e4ff",
+                    "tertiary-container": "#886116",
+                    "on-primary-fixed-variant": "#144975",
+                    "on-tertiary-fixed-variant": "#604100",
+                    "on-secondary-fixed-variant": "#614000",
+                    "secondary-container": "#ffc161",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#dae3f2",
+                    "secondary-fixed": "#ffddb0",
+                    "outline": "#727780",
+                    "on-secondary-fixed": "#281800",
+                    "inverse-primary": "#9ecafe",
+                    "tertiary": "#6c4a00",
+                    "inverse-on-surface": "#e9f1ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-padding": "80px",
+                    "stack-md": "16px",
+                    "margin-mobile": "20px",
+                    "container-max": "1200px",
+                    "gutter": "24px",
+                    "stack-sm": "8px",
+                    "margin-desktop": "64px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Space Grotesk"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-xl": ["Space Grotesk"],
+                    "headline-lg-mobile": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .navy-duotone {
+            position: relative;
+        }
+        .navy-duotone::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: #21537f;
+            mix-blend-mode: multiply;
+            opacity: 0.6;
+        }
+        .tonal-card {
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 20px rgba(33, 83, 127, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .tonal-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(33, 83, 127, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-5 md:px-margin-desktop max-w-container-max mx-auto h-20 bg-surface/90 backdrop-blur-md shadow-sm">
+<div class="h-8 w-auto">{{DATA:DOCUMENT:DOCUMENT_11}}</div>
+<nav class="hidden md:flex items-center gap-stack-lg"><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/">Ana Sayfa</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Hakkımızda</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Pedagoglar</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Katıl</a>
+</nav>
+<div class="flex items-center gap-stack-md">
+
+<button class="bg-primary-container text-white px-5 py-2.5 rounded-lg font-label-md hover:opacity-90 transition-opacity active:scale-95 shadow-sm">Topluluğa Katıl</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="py-section-padding px-5 md:px-margin-desktop max-w-container-max mx-auto text-center">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-stack-md">Akranca'ya katıl</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Birlikte daha güçlü, daha güvenli ve daha empatik bir gelecek inşa edebiliriz. Sizin de bu yolculukta bir yeriniz var.
+            </p>
+</section>
+<!-- Role Cards -->
+<section class="pb-section-padding px-5 md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Volunteer -->
+<div class="tonal-card p-stack-lg rounded-xl flex flex-col items-center text-center">
+<div class="w-full h-48 mb-stack-lg rounded-lg overflow-hidden navy-duotone">
+<img class="w-full h-full object-cover" data-alt="A cinematic, low-angle shot of young volunteers standing together in a circle, their hands joined in the center. The lighting is soft and hopeful, with a cool navy blue overlay reflecting the professional and empathetic brand identity of Akranca. The setting is a modern, minimalist community space with architectural shadows and soft textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtwqTG7wnqeR1m1-PhvRxp3SXjKsl6ZRz3QHxfKhGaWTWaOB0s0SnMG8dy5M5vrsNfxKgKucYl4T8mS-j5fmhv9tn1eds5VLdkSEd4-E30PEG6A03b03SV_YOx84EmxZ9EyooOvBr143lQyO5P0G17z0jbfOVMPg5SXsmD0y8wVJQJXO9lhOr-_O59NQ2av--OLHIiIDqzlusd2tQIn_9jnyTX-kUswBEKDrU2AulQqVE5Rs8diMxM">
+</div>
+<div class="p-2 bg-secondary-container/20 rounded-full mb-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="volunteer_activism">volunteer_activism</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Gönüllü olarak</h3>
+<p class="text-on-surface-variant">Saha çalışmalarımızda ve farkındalık kampanyalarımızda aktif rol alarak değişimin parçası olun.</p>
+</div>
+<!-- Pedagog -->
+<div class="tonal-card p-stack-lg rounded-xl flex flex-col items-center text-center">
+<div class="w-full h-48 mb-stack-lg rounded-lg overflow-hidden navy-duotone">
+<img class="w-full h-full object-cover" data-alt="An atmospheric, close-up shot of a professional pedagogical setting. A warm, softly lit room where a counselor's hands are resting on a wooden table next to a notebook. The focus is on the environment of safety and institutional trust. The image uses a deep navy blue duotone filter to maintain consistency with the brand's authoritative yet empathetic tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs9WTNTJt9FpjBZMQ6BxVmsJ3swgw0d8JMMfw_K1r98_1RbQqLtD3PzgqUjspqw-Pa_rkidfTvva0JoG3U2bi1uV7nEVnco5PMqj2_5j7EcfRZQ4DWz175ba42PJ85Z2AXDSKxf-sKu2qQVoEXYCLGOi5hzrNQZyyIJWHLGwpDLX7dmuyeLGQ8ISB32ENDswQgBjmExIKj1tRmRGWh6WHpP76zJ5cRynQ9QLjbaTvLKlFZjGbvZjBF">
+</div>
+<div class="p-2 bg-secondary-container/20 rounded-full mb-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="psychology">psychology</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Pedagog olarak</h3>
+<p class="text-on-surface-variant">Uzmanlığınızla topluluğumuza rehberlik edin ve bilimsel temelli çözüm süreçlerine katkıda bulunun.</p>
+</div>
+<!-- Follower -->
+<div class="tonal-card p-stack-lg rounded-xl flex flex-col items-center text-center">
+<div class="w-full h-48 mb-stack-lg rounded-lg overflow-hidden navy-duotone">
+<img class="w-full h-full object-cover" data-alt="A minimalist architectural shot of a modern hallway with rhythmic shadows and clean lines. In the distance, a blurry figure of a person looking at a digital bulletin board. The scene conveys a sense of observation and solidarity without direct identification. The signature navy blue duotone filter creates a professional and secure atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMkkNHQwiYeY7ylTGttg7C8YgLpXpX6TGLhyuLBK4d3LDrZIOUm8QuWkcg-pjSU3ADpFTBJ4myZ8-amjos7Ou2qgZ0gB1C9wELVsdLlkQR1M6bqk7eMGZtYjMIK12CmNc1XANkyy7NxJqGo3fI-Bi5RlWwjWVmlwML8T-jbkB8o4F6sIS4HmuxOCkIo_9XNLYP6WNq8Mm8dZaA1BiD55eMANT6zRycMsOMvyEjQj-1JsoAfx3d7_Dw">
+</div>
+<div class="p-2 bg-secondary-container/20 rounded-full mb-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="visibility">visibility</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Takipçi olarak</h3>
+<p class="text-on-surface-variant">Yayınlarımızı takip edin, içeriklerimizi paylaşarak farkındalığın yayılmasına destek olun.</p>
+</div>
+</div>
+</section>
+<!-- Form Section -->
+<section class="pb-section-padding px-5 md:px-margin-desktop max-w-container-max mx-auto">
+<div class="max-w-3xl mx-auto">
+<div class="mb-stack-lg text-center">
+<h2 class="font-headline-md text-headline-md text-on-surface">Başvuru Formu</h2>
+<p class="text-on-surface-variant mt-2">Seçtiğiniz rol ile ilgili detaylı bilgi almak ve aramıza katılmak için lütfen aşağıdaki alanı doldurun.</p>
+</div>
+<div class="bg-surface p-stack-lg rounded-xl border border-outline-variant max-w-2xl mx-auto shadow-sm" id="form-alani">
+<form class="space-y-stack-md text-left">
+<div>
+<label class="block font-label-md text-on-surface mb-2">Başvuru Rolü</label>
+<select class="w-full p-2.5 rounded-lg border border-outline-variant bg-surface text-on-surface font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all">
+<option value="gonullu">Gönüllü</option>
+<option value="pedagog">Pedagog</option>
+<option value="takipci">Takipçi</option>
+</select>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-on-surface mb-2">Ad Soyad</label>
+<input class="w-full p-2.5 rounded-lg border border-outline-variant bg-surface text-on-surface font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Adınız ve soyadınız" type="text">
+</div>
+<div>
+<label class="block font-label-md text-on-surface mb-2">E-posta</label>
+<input class="w-full p-2.5 rounded-lg border border-outline-variant bg-surface text-on-surface font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="ornek@eposta.com" type="email">
+</div>
+</div>
+<div>
+<label class="block font-label-md text-on-surface mb-2">Telefon (Opsiyonel)</label>
+<input class="w-full p-2.5 rounded-lg border border-outline-variant bg-surface text-on-surface font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="05xx xxx xx xx" type="tel">
+</div>
+<div class="hidden space-y-stack-md" id="pedagog-fields">
+<div>
+<label class="block font-label-md text-on-surface mb-2">Uzmanlık Alanı</label>
+<input class="w-full p-2.5 rounded-lg border border-outline-variant bg-surface text-on-surface font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Örn: Çocuk ve Ergen Psikolojisi" type="text">
+</div>
+<div>
+<label class="block font-label-md text-on-surface mb-2">Mezuniyet / Kurum</label>
+<input class="w-full p-2.5 rounded-lg border border-outline-variant bg-surface text-on-surface font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Mezun olduğunuz okul veya çalıştığınız kurum" type="text">
+</div>
+</div>
+<div>
+<label class="block font-label-md text-on-surface mb-2">Neden Akranca?</label>
+<textarea class="w-full p-2.5 rounded-lg border border-outline-variant bg-surface text-on-surface font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Bize motivasyonunuzdan bahsedin..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-white font-headline-md py-3 rounded-lg hover:opacity-90 transition-opacity active:scale-95 shadow-sm mt-4" type="submit">Başvuruyu Gönder</button>
+</form>
+<script>
+    document.querySelector('#form-alani select').addEventListener('change', function(e) {
+      const pedagogFields = document.getElementById('pedagog-fields');
+      if (e.target.value === 'pedagog') {
+        pedagogFields.classList.remove('hidden');
+      } else {
+        pedagogFields.classList.add('hidden');
+      }
+    });
+  </script>
+</div>
+<div class="mt-stack-lg flex justify-center">
+<p class="text-label-sm text-on-surface-variant text-center max-w-md">
+                        Gönderdiğiniz bilgiler 6698 sayılı KVKK kapsamında korunmaktadır ve sadece başvuru süreçleri için kullanılacaktır.
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface py-section-padding text-white">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-5 md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="h-8 w-auto mb-stack-md">Akranca</div>
+<p class="font-body-md text-surface-variant/80">Akran zorbalığına karşı toplumsal bilinci artırmak ve güvenli bir gelecek inşa etmek için çalışıyoruz.</p>
+</div>
+<div>
+<h4 class="font-label-md text-primary-fixed-dim mb-stack-md">Hızlı Linkler</h4>
+<ul class="space-y-stack-sm">
+<li class=""><a class="font-body-md text-surface-variant/80 hover:text-white transition-colors" href="#">Hakkımızda</a></li>
+<li class=""><a class="font-body-md text-surface-variant/80 hover:text-white transition-colors" href="#">Hizmetler</a></li>
+<li class=""><a class="font-body-md text-surface-variant/80 hover:text-white transition-colors" href="#">Topluluk</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-primary-fixed-dim mb-stack-md">Yasal</h4>
+<ul class="space-y-stack-sm">
+<li class=""><a class="font-body-md text-surface-variant/80 hover:text-white transition-colors" href="#">Gizlilik Politikası</a></li>
+<li class=""><a class="font-body-md text-surface-variant/80 hover:text-white transition-colors" href="#">Kullanım Koşulları</a></li>
+<li class=""><a class="font-body-md text-surface-variant/80 hover:text-white transition-colors" href="#">KVKK Aydınlatma</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-primary-fixed-dim mb-stack-md">İletişim</h4>
+<ul class="space-y-stack-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="mail">mail</span>
+<a class="font-body-md text-surface-variant/80 hover:text-white transition-colors" href="mailto:iletisim@akranca.org">iletisim@akranca.org</a>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="font-body-md text-surface-variant/80">İstanbul, Türkiye</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-section-padding pt-stack-lg border-t border-surface-variant/10 px-5 md:px-margin-desktop max-w-container-max mx-auto">
+<p class="font-label-sm text-surface-variant/60 text-center">© 2024 Akranca. Tüm hakları saklıdır.</p>
+</div>
+</footer>
+<script>
+        // Simple interaction for the role cards
+        document.querySelectorAll('.tonal-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const formArea = document.getElementById('form-alani');
+                formArea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Visual feedback
+                formArea.classList.add('border-primary');
+                formArea.classList.remove('border-outline-variant');
+                setTimeout(() => {
+                    formArea.classList.remove('border-primary');
+                    formArea.classList.add('border-outline-variant');
+                }, 2000);
+            });
+        });
+    </script>
+
+
+</body></html>

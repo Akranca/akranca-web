@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Akranca Uygulaması | Uzman İçerikleri</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#131c26",
+                      "on-tertiary-fixed-variant": "#3e4853",
+                      "blue-surface": "#DCE7F2",
+                      "surface-container-low": "#f2f4f6",
+                      "primary": "#21537f",
+                      "surface-container-high": "#e6e8ea",
+                      "on-primary": "#ffffff",
+                      "secondary": "#805600",
+                      "surface-dim": "#d8dadc",
+                      "surface-tint": "#32618f",
+                      "outline-variant": "#c2c7d0",
+                      "on-primary-fixed": "#001d35",
+                      "surface-container": "#eceef0",
+                      "secondary-fixed-dim": "#f9bc5c",
+                      "on-secondary-fixed-variant": "#614000",
+                      "blue-light": "#7A9CC0",
+                      "text-hint": "#939CA6",
+                      "tertiary-fixed": "#dae3f2",
+                      "secondary-fixed": "#ffddb0",
+                      "on-background": "#191c1e",
+                      "blue-dark": "#2C4F73",
+                      "on-surface": "#191c1e",
+                      "on-error-container": "#93000a",
+                      "surface-container-highest": "#e0e3e5",
+                      "success": "#3E7C4F",
+                      "primary-fixed": "#d0e4ff",
+                      "on-secondary": "#ffffff",
+                      "surface-variant": "#e0e3e5",
+                      "on-surface-variant": "#42474f",
+                      "error-container": "#ffdad6",
+                      "secondary-container": "#ffc161",
+                      "amber-surface": "#FDF0DC",
+                      "on-primary-container": "#dae9ff",
+                      "on-tertiary": "#ffffff",
+                      "inverse-surface": "#2d3133",
+                      "amber-light": "#F5CB8A",
+                      "border-subtle": "#D5DAE0",
+                      "surface-bright": "#f8f9fb",
+                      "on-secondary-container": "#754e00",
+                      "outline": "#727780",
+                      "text-secondary": "#5C6672",
+                      "surface": "#f8f9fb",
+                      "on-primary-fixed-variant": "#144975",
+                      "inverse-on-surface": "#eff1f3",
+                      "on-error": "#ffffff",
+                      "tertiary": "#48515d",
+                      "background": "#f8f9fb",
+                      "tertiary-container": "#606975",
+                      "primary-container": "#3d6b99",
+                      "on-tertiary-container": "#e0e9f8",
+                      "inverse-primary": "#9ecafe",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed-dim": "#bec7d5",
+                      "on-secondary-fixed": "#281800",
+                      "primary-fixed-dim": "#9ecafe",
+                      "error": "#C0392B"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "32px",
+                      "unit": "4px",
+                      "md": "16px",
+                      "lg": "24px",
+                      "sm": "8px",
+                      "xs": "4px",
+                      "margin-mobile": "16px",
+                      "gutter": "16px",
+                      "margin-desktop": "24px"
+              },
+              "fontFamily": {
+                      "label-lg": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-lg-mobile": ["Space Grotesk"],
+                      "body-sm": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "headline-sm": ["Space Grotesk"],
+                      "headline-md": ["Space Grotesk"],
+                      "headline-lg": ["Space Grotesk"],
+                      "body-emphasis": ["Inter"]
+              },
+              "fontSize": {
+                      "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                      "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                      "body-emphasis": ["16px", {"lineHeight": "1.5", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #F4F6F8;
+            color: #191C1E;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .phone-mockup {
+            box-shadow: 0 50px 100px -20px rgba(0,0,0,0.1), 0 30px 60px -30px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop max-w-[1440px] mx-auto h-20 bg-surface/90 backdrop-blur-md">
+<div class="flex items-center gap-lg">
+<span class="font-headline-md text-headline-md font-bold text-primary">Akranca</span>
+<nav class="hidden md:flex gap-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Hakkımızda</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Sorun</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Hizmetler</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Topluluk</a>
+</nav>
+</div>
+<div class="flex items-center gap-sm">
+<button class="px-md py-sm font-label-md text-label-md text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 duration-200">Yardım Al</button>
+<button class="px-md py-sm bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:opacity-80 transition-opacity active:scale-95 duration-200">Topluluğa Katıl</button>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto px-margin-desktop space-y-32 py-16">
+<!-- Section 1: Hero -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-lg">
+<span class="inline-block px-md py-1 bg-primary/10 text-primary border border-primary/20 rounded-full font-label-sm text-label-sm uppercase tracking-wide">Geliştiriliyor</span>
+<h1 class="font-headline-lg text-headline-lg text-on-background">Akranca uygulaması</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Uzman pedagogların ürettiği içerikler, tek bir uygulamada. Her yaştan gencin kendini ifade edebileceği güvenli bir alan.</p>
+<div class="pt-sm">
+<button class="px-xl py-md bg-primary-container text-on-primary rounded-lg font-label-lg text-label-lg shadow-sm hover:bg-blue-dark transition-all active:scale-[0.98]">
+                        Yayınlandığında haberim olsun
+                    </button>
+</div>
+</div>
+<div class="relative flex justify-center lg:justify-end">
+<div class="w-72 h-[580px] bg-slate-900 rounded-[3rem] border-[8px] border-slate-800 phone-mockup relative overflow-hidden">
+<!-- Screen Content -->
+<div class="absolute inset-0 bg-surface flex flex-col p-6 space-y-6">
+<!-- Abstract blocks simulating app content -->
+<div class="w-full h-8 bg-surface-container-high rounded-full"></div>
+<div class="space-y-3">
+<div class="w-full h-32 bg-blue-surface rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl">play_circle</span>
+</div>
+<div class="w-3/4 h-3 bg-surface-container-highest rounded-full"></div>
+<div class="w-1/2 h-3 bg-surface-container-highest rounded-full opacity-50"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-square bg-amber-surface rounded-xl p-4 flex flex-col justify-between">
+<div class="w-8 h-8 bg-secondary-container/50 rounded-full"></div>
+<div class="w-12 h-2 bg-on-secondary-container/30 rounded-full"></div>
+</div>
+<div class="aspect-square bg-surface-container rounded-xl p-4 flex flex-col justify-between">
+<div class="w-8 h-8 bg-outline-variant/50 rounded-full"></div>
+<div class="w-12 h-2 bg-outline-variant/30 rounded-full"></div>
+</div>
+</div>
+<div class="w-full h-40 bg-surface-container-low rounded-xl border border-border-subtle p-4 space-y-3">
+<div class="w-full h-2 bg-outline-variant/20 rounded-full"></div>
+<div class="w-full h-2 bg-outline-variant/20 rounded-full"></div>
+<div class="w-2/3 h-2 bg-outline-variant/20 rounded-full"></div>
+</div>
+</div>
+<!-- Notch -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-800 rounded-b-2xl"></div>
+</div>
+</div>
+</section>
+<!-- Section 2: Nasıl Çalışır -->
+<section class="space-y-lg">
+<h2 class="font-headline-md text-headline-md text-center">Nasıl Çalışır?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-12">
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-border-subtle flex flex-col items-center text-center space-y-md">
+<div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm">1</div>
+<h3 class="font-body-emphasis text-body-emphasis">Rolünü seç</h3>
+<p class="text-on-surface-variant text-body-sm">Öğrenci, veli veya öğretmen rolünü seçerek başla. Kayıt gerektirmez.</p>
+</div>
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-border-subtle flex flex-col items-center text-center space-y-md">
+<div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm">2</div>
+<h3 class="font-body-emphasis text-body-emphasis">İçerikleri gör</h3>
+<p class="text-on-surface-variant text-body-sm">Sadece senin rolüne uygun, pedagoglar tarafından hazırlanan içerikleri keşfet.</p>
+</div>
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-border-subtle flex flex-col items-center text-center space-y-md">
+<div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm">3</div>
+<h3 class="font-body-emphasis text-body-emphasis">Faydalıları kaydet</h3>
+<p class="text-on-surface-variant text-body-sm">İlgini çeken ve faydalı bulduğun içerikleri daha sonra incelemek üzere kaydet.</p>
+</div>
+</div>
+</section>
+<!-- Section 3: Özellikler -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-surface-container p-lg rounded-xl flex flex-col gap-md">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+<h4 class="font-body-emphasis text-body-emphasis">Doğrulanmış İçerik</h4>
+<p class="text-body-sm text-on-surface-variant leading-relaxed">Tüm içerikler alanında uzman pedagoglar ve eğitimciler tarafından titizlikle hazırlanmaktadır.</p>
+</div>
+<div class="bg-surface-container p-lg rounded-xl flex flex-col gap-md">
+<span class="material-symbols-outlined text-primary text-3xl">account_circle</span>
+<h4 class="font-body-emphasis text-body-emphasis">Rol Bazlı Akış</h4>
+<p class="text-body-sm text-on-surface-variant leading-relaxed">Öğrenci, veli ve öğretmenlere özel özelleştirilmiş bilgi akışı ile ihtiyacınız olana hızlıca ulaşın.</p>
+</div>
+<div class="bg-surface-container p-lg rounded-xl flex flex-col gap-md">
+<span class="material-symbols-outlined text-primary text-3xl">lock</span>
+<h4 class="font-body-emphasis text-body-emphasis">%100 Gizlilik</h4>
+<p class="text-body-sm text-on-surface-variant leading-relaxed">Kayıt gerektirmez, kişisel verileriniz toplanmaz ve izlenmez. Sadece bilgiye odaklanın.</p>
+</div>
+</section>
+<!-- Section 4: İçerik Formatları -->
+<section class="space-y-lg">
+<h2 class="font-headline-sm text-headline-sm">Zengin İçerik Formatları</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-surface-container-lowest p-md border border-border-subtle rounded-xl flex items-center gap-md">
+<div class="w-12 h-12 flex-shrink-0 bg-blue-surface rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">videocam</span>
+</div>
+<div>
+<h5 class="font-body-emphasis text-body-emphasis">Kısa video</h5>
+<p class="text-label-sm text-on-surface-variant">Hızlı ve etkili görsel anlatımlar.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-md border border-border-subtle rounded-xl flex items-center gap-md">
+<div class="w-12 h-12 flex-shrink-0 bg-amber-surface rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">image</span>
+</div>
+<div>
+<h5 class="font-body-emphasis text-body-emphasis">Görsel</h5>
+<p class="text-label-sm text-on-surface-variant">Bilgilendirici grafikler ve infografikler.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-md border border-border-subtle rounded-xl flex items-center gap-md">
+<div class="w-12 h-12 flex-shrink-0 bg-surface-container-high rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">article</span>
+</div>
+<div>
+<h5 class="font-body-emphasis text-body-emphasis">Yazı</h5>
+<p class="text-label-sm text-on-surface-variant">Derinlemesine rehberler ve makaleler.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Geliştirme Durumu -->
+<section class="max-w-2xl mx-auto bg-surface-container-lowest p-xl rounded-xl border border-border-subtle space-y-lg">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">engineering</span>
+<h2 class="font-headline-sm text-headline-sm">Geliştirme Durumu</h2>
+</div>
+<ul class="space-y-md">
+<li class="flex items-center gap-md text-success font-body-emphasis">
+<span class="material-symbols-outlined">check_circle</span>
+                    Tasarım tamamlandı
+                </li>
+<li class="flex items-center gap-md text-success font-body-emphasis">
+<span class="material-symbols-outlined">check_circle</span>
+                    Geliştirme başladı
+                </li>
+<li class="flex items-center gap-md text-on-surface-variant opacity-60">
+<span class="material-symbols-outlined">radio_button_unchecked</span>
+                    Kapalı beta
+                </li>
+<li class="flex items-center gap-md text-on-surface-variant opacity-60">
+<span class="material-symbols-outlined">radio_button_unchecked</span>
+                    Mağazada yayın
+                </li>
+</ul>
+<div class="pt-md">
+<button class="w-full md:w-auto px-lg py-sm border border-primary text-primary rounded-lg font-label-lg text-label-lg hover:bg-primary/5 transition-colors">
+                    Yayınlandığında haberim olsun
+                </button>
+</div>
+</section>
+<!-- Section 6: Closing CTA -->
+<section class="bg-primary text-on-primary p-xl rounded-xl text-center space-y-lg relative overflow-hidden">
+<!-- Decorative circle -->
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 space-y-md">
+<p class="font-headline-md text-headline-md max-w-2xl mx-auto">Topluluğumuza katılarak bu yolculuğun bir parçası olun.</p>
+<div class="pt-md">
+<a class="inline-block px-xl py-md bg-amber-light text-on-secondary-fixed rounded-lg font-label-lg text-label-lg hover:scale-105 transition-transform" href="katil.html">
+                        Topluluğa Katıl
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-on-background py-16 mt-32">
+<div class="max-w-[1440px] mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter text-surface-variant">
+<div class="space-y-md">
+<span class="font-headline-md text-headline-md font-bold text-surface-bright">Akranca</span>
+<p class="font-body-md text-body-md opacity-80">Güvenli ve bilinçli bir gelecek için uzman içerik platformu.</p>
+</div>
+<div>
+<h4 class="text-white font-label-lg text-label-lg mb-md">Bağlantılar</h4>
+<ul class="space-y-xs">
+<li><a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-white transition-colors" href="#">Hakkımızda</a></li>
+<li><a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-white transition-colors" href="#">Hizmetler</a></li>
+<li><a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-white transition-colors" href="#">Topluluk</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-label-lg text-label-lg mb-md">Yasal</h4>
+<ul class="space-y-xs">
+<li><a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-white transition-colors" href="#">Gizlilik Politikası</a></li>
+<li><a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-white transition-colors" href="#">Kullanım Koşulları</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-label-lg text-label-lg mb-md">İletişim</h4>
+<p class="font-label-sm text-label-sm text-surface-variant/80">info@akranca.org</p>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-margin-desktop mt-16 pt-8 border-t border-white/10">
+<p class="font-label-sm text-label-sm text-surface-variant/60">© 2024 Akranca. Tüm hakları saklıdır.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for buttons
+        document.querySelectorAll('button, a').forEach(elem => {
+            elem.addEventListener('mousedown', () => {
+                elem.style.transform = 'scale(0.97)';
+            });
+            elem.addEventListener('mouseup', () => {
+                elem.style.transform = '';
+            });
+            elem.addEventListener('mouseleave', () => {
+                elem.style.transform = '';
+            });
+        });
+
+        // Simple scroll animation for visibility
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

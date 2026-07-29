@@ -1,0 +1,30 @@
+# ── Stitch ham çıktısı (düzenlenmiş dosyalar repo kökünde) ──────────────────
+stitch_akranca_community_platform/
+
+# ── İç belgeler (ekip için, kamuya açık değil) ──────────────────────────────
+Docs/prd.md
+Docs/tech_spec.md
+Docs/start.md
+Docs/end.md
+Docs/marka.md
+Docs/Developer_logs/
+
+# ── Ortam ve gizli bilgiler ──────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── İşletim sistemi ─────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editör/IDE ───────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.user
+
+# ── Node (ileride kullanılabilir) ────────────────────────────────────────────
+node_modules/
+dist/
