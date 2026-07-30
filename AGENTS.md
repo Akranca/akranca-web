@@ -33,3 +33,9 @@ Projenin tüm mimari kuralları `tech_spec.md` dosyasındadır. Mimariyi ilgilen
 - Kapsam dışına çıkma. Görevle ilgisi olmayan dosyaları "iyileştirmek" için değiştirme.
 - Kod yazmadan önce ne yapacağını kısaca anlat.
 - Marka renkleri, tipografi ve tonlar `marka.md` dosyasından alınır; göz kararı renk veya font kullanma.
+
+## İnisiyatif sınırı
+
+git commit, git push, log dosyası yazımı ve branch birleştirme işlemlerini
+ASLA kendi inisiyatifinle yapma. Bu işlemler yalnızca sana o an açıkça
+söylendiğinde yapılır. Kodlama bittiğinde durup beklemek doğru davranıştır.

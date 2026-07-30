@@ -1,7 +1,7 @@
-<!DOCTYPE html><html class="light" lang="tr" style=""><head>
+﻿<!DOCTYPE html><html class="light" lang="tr" style=""><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Pedagoglar | Akranca</title>
+<title>Uzmanlarimiz | Akranca</title>
 <!-- Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
@@ -122,18 +122,31 @@
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
 <!-- TopNavBar -->
-<header class="sticky top-0 z-50 flex justify-between items-center w-full px-5 md:px-margin-desktop max-w-container-max mx-auto h-20 bg-surface/90 backdrop-blur-md shadow-sm">
-<div class="flex items-center gap-gutter">
-<a href="index.html" class="block w-32">Akranca</a>
-<nav class="hidden md:flex gap-stack-lg items-center">
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Hakkımızda</a>
-<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="pedagoglar.html">Pedagoglar</a>
-</nav>
+<header class="sticky top-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline/20">
+<div class="flex justify-between items-center w-full px-5 md:px-16 max-w-[1200px] mx-auto h-20">
+<div class="flex items-center gap-2">
+<a class="flex items-center" href="index.html">
+                    <img src="assets/images/logo.svg" alt="Akranca" class="h-12 w-auto">
+                </a>
 </div>
-<div class="flex items-center gap-stack-md">
-<a class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-md text-label-md hover:opacity-80 transition-opacity active:scale-95 duration-200" href="katil.html">
-                Katıl
-            </a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-muted-text hover:text-primary transition-colors font-medium text-sm py-1" href="index.html">Ana Sayfa</a>
+<a class="text-muted-text hover:text-primary transition-colors font-medium text-sm" href="hakkimizda.html">Hakkımızda</a>
+<a class="text-primary border-b-2 border-primary transition-colors font-semibold text-sm py-1" href="pedagoglar.html">Uzmanlarımız</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden md:block bg-primary text-on-primary px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-dark transition-all active:scale-95" href="katil.html">Topluluğa Katıl</a>
+<button class="md:hidden p-2 text-on-surface" id="menu-toggle">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation -->
+<div class="md:hidden absolute top-20 left-0 w-full bg-surface border-b border-outline/20 flex-col p-5 gap-4 shadow-xl hidden" id="mobile-menu">
+<a class="text-muted-text font-medium text-base py-2" href="index.html">Ana Sayfa</a>
+<a class="text-muted-text font-medium text-base py-2" href="hakkimizda.html">Hakkımızda</a>
+<a class="text-primary font-semibold text-base py-2" href="pedagoglar.html">Uzmanlarımız</a>
+<a class="bg-primary text-on-primary px-6 py-3 rounded-lg font-semibold text-center mt-2" href="katil.html">Topluluğa Katıl</a>
 </div>
 </header>
 <main>
@@ -144,7 +157,7 @@
 <span class="inline-block py-1 px-3 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm mb-stack-md">
                         Uzmanlık &amp; Güven
                     </span>
-<h1 class="font-headline-xl text-headline-xl text-primary mb-stack-md tracking-tight">Uzman Pedagoglarımız</h1>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-stack-md tracking-tight">Uzmanlarımız</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-xl">
                         Platformumuzda içerik üretecek uzman pedagogları davet ediyoruz. Doğrulanmış her uzman burada yer alacak ve topluluğumuza rehberlik edecek.
                     </p>
@@ -207,39 +220,46 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-inverse-surface py-section-padding text-inverse-on-surface">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-5 md:px-margin-desktop max-w-container-max mx-auto">
+<footer class="bg-inverse-surface py-section-padding text-inverse-on-surface transition-colors">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-5 md:px-16 max-w-[1200px] mx-auto">
 <div class="col-span-1 md:col-span-1">
-<div class="w-32 mb-stack-md">{{DATA:DOCUMENT:DOCUMENT_4}}</div>
-<p class="mt-stack-md font-body-md text-surface-variant/80">
-                    Akran zorbalığına karşı profesyonel ve empatik bir duruş. Güvenli okul ortamları için birlikte.
+<img src="assets/images/logo-white.svg" alt="Akranca" class="h-12 w-auto mb-6">
+<p class="font-body-md text-body-md text-surface-variant/80 mb-4 max-w-xs">
+                    Okulda ve hayatta akran zorbalığına karşı profesyonel ve toplumsal çözüm ortağınız.
                 </p>
 </div>
-<div class="flex flex-col gap-stack-sm">
-<span class="font-label-md text-label-md text-primary-fixed-dim mb-2">Platform</span>
-<a class="font-body-md text-surface-variant/80 hover:text-white transition-colors" href="#">Hakkımızda</a>
-<a class="font-body-md text-primary-fixed-dim" href="pedagoglar.html">Pedagoglar</a>
-<a class="font-body-md text-surface-variant/80 hover:text-white transition-colors" href="#">Topluluk</a>
+<div class="space-y-4">
+<h5 class="font-label-md text-label-md text-surface-bright">Kurumsal</h5>
+<ul class="space-y-3">
+<li class=""><a class="font-body-md text-body-md text-surface-variant/80 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200" href="hakkimizda.html">Hakkımızda</a></li>
+<li class=""><a class="font-body-md text-body-md text-surface-variant/80 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200" href="#">Hizmetler</a></li>
+<li class=""><a class="font-body-md text-body-md text-surface-variant/80 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200" href="#">Topluluk</a></li>
+</ul>
 </div>
-<div class="flex flex-col gap-stack-sm">
-<span class="font-label-md text-label-md text-primary-fixed-dim mb-2">Yasal</span>
-<a class="font-body-md text-surface-variant/80 hover:text-white transition-colors" href="#">Gizlilik Politikası</a>
-<a class="font-body-md text-surface-variant/80 hover:text-white transition-colors" href="#">Kullanım Koşulları</a>
-<a class="font-body-md text-surface-variant/80 hover:text-white transition-colors" href="#">KVKK</a>
+<div class="space-y-4">
+<h5 class="font-label-md text-label-md text-surface-bright">Yasal</h5>
+<ul class="space-y-3">
+<li class=""><a class="font-body-md text-body-md text-surface-variant/80 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200" href="gizlilik-politikasi.html">Gizlilik Politikası</a></li>
+<li class=""><a class="font-body-md text-body-md text-surface-variant/80 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200" href="kullanim-kosullari.html">Kullanım Koşulları</a></li>
+</ul>
 </div>
-<div class="flex flex-col gap-stack-sm">
-<span class="font-label-md text-label-md text-primary-fixed-dim mb-2">İletişim</span>
-<a class="font-body-md text-surface-variant/80 hover:text-white transition-colors" href="mailto:info@akranca.org">info@akranca.org</a>
-<div class="flex gap-4 mt-2">
-<span class="material-symbols-outlined cursor-pointer hover:text-primary-fixed transition-colors">share</span>
-<span class="material-symbols-outlined cursor-pointer hover:text-primary-fixed transition-colors">mail</span>
+<div class="space-y-4">
+<h5 class="font-label-md text-label-md text-surface-bright">İletişim</h5>
+<ul class="space-y-3">
+<li class=""><a class="font-body-md text-body-md text-surface-variant/80 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200" href="iletisim.html">Bize Ulaşın</a></li>
+<li class="flex gap-4 mt-6">
+<a class="text-surface-variant/80 hover:text-primary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+<a class="text-surface-variant/80 hover:text-primary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+</li>
+</ul>
 </div>
 </div>
-</div>
-<div class="max-w-container-max mx-auto px-5 md:px-margin-desktop mt-section-padding pt-stack-lg border-t border-surface-variant/20">
-<p class="font-label-sm text-label-sm text-surface-variant/60">
-                © 2024 Akranca. Tüm hakları saklıdır.
-            </p>
+<div class="max-w-[1200px] mx-auto px-5 md:px-16 mt-20 pt-8 border-t border-white/10 text-center md:text-left">
+<p class="font-label-sm text-label-sm text-surface-variant/60">© 2026 Akranca. Tüm hakları saklıdır.</p>
 </div>
 </footer>
 <!-- Logic for fetching and rendering pedagoglar.json -->
@@ -300,7 +320,22 @@
         }
 
         // Initialize on load
-        window.addEventListener('DOMContentLoaded', fetchPedagoglar);
+        window.addEventListener('DOMContentLoaded', () => {
+            fetchPedagoglar();
+            
+            // Mobile Menu Toggle Logic
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+                    const icon = menuToggle.querySelector('.material-symbols-outlined');
+                    icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+                });
+            }
+        });
     </script>
 
 
