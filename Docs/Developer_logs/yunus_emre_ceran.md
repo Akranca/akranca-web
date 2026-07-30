@@ -35,3 +35,10 @@
 
 #### logo.svg Duzeltmesi
 - width="1024px" -> width="100%" olarak degistirildi; Tailwind h-* siniflarinin SVG'yi dogru boyutlandirmasi saglandi.
+### 31.07.2026 - 00:59
+**Branch:** feature/footer-and-animations
+- Tüm HTML sayfalarındaki (index.html, hakkimizda.html vb. toplam 9 dosya) footer bölümü baştan yazılarak tek tipleştirildi.
+- Footer yapısı eski grid diziliminden çıkarılıp mobil ve tablet uyumlu, taşmaları (üst üste binmeleri) tamamen önleyen lex ve grid kombinasyonuyla (sağ tarafta grid-cols-2 sm:grid-cols-3) yeniden oluşturuldu.
+- Tailwind config dosyalarındaki farklılıklardan kaynaklanan "görünmez metin" (boş footer) hatası engellendi; metin renkleri doğrudan Tailwind'in kalıcı 	ext-white utility sınıflarına bağlandı.
+- Footer içindeki sosyal medya linklerine Instagram, X, YouTube ve LinkedIn SVG ikonları eklendi.
+- Sayfalar arası geçişi yumuşatmak için CSS tabanlı global bir pageFadeIn animasyonu sisteme entegre edildi.
