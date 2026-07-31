@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html><html class="light" lang="tr" style=""><head>
+<!DOCTYPE html><html class="light" lang="tr" style=""><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Uzmanlarimiz | Akranca</title>
@@ -220,8 +220,8 @@
 <div class="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-16 px-5 md:px-16 max-w-[1200px] mx-auto">
 <div class="w-full lg:w-1/3">
 <img src="assets/images/logo-white.svg" alt="Akranca" class="h-10 md:h-12 w-auto max-w-[200px] object-contain object-left mb-6">
-<p class="font-body-md text-body-md text-white/80 mb-4 max-w-sm">
-Okulda ve hayatta akran zorbalığına karşı profesyonel ve toplumsal çözüm ortağınız.
+<p class="font-body-md text-body-md text-white/80 mb-4 max-w-md">
+Okulda ve hayatta akran zorbalığına karşı toplumsal dayanışma alanınız
 </p>
 </div>
 <div class="w-full lg:w-2/3 grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-12">
@@ -268,7 +268,7 @@ Okulda ve hayatta akran zorbalığına karşı profesyonel ve toplumsal çözüm
             try {
                 // In a real environment, this would fetch the actual JSON file
                 // For demonstration within this sandbox, we define a fallback or look for the file
-                const response = await fetch('/assets/data/pedagoglar.json');
+                const response = await fetch('assets/data/pedagoglar.json');
                 
                 if (!response.ok) throw new Error('File not found');
                 
