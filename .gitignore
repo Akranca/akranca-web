@@ -28,3 +28,6 @@ desktop.ini
 # ── Node (ileride kullanılabilir) ────────────────────────────────────────────
 node_modules/
 dist/
+
+# Kilavuz dosyasi
+duzenleme.md

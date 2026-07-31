@@ -1,333 +1,227 @@
 ﻿<!DOCTYPE html>
-
-<html class="light" lang="tr"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Akranca Uygulaması | Uzman İçerikleri</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akranca Uygulaması</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <script id="tailwind-config">
         tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "on-tertiary-fixed": "#131c26",
-                      "on-tertiary-fixed-variant": "#3e4853",
-                      "blue-surface": "#DCE7F2",
-                      "surface-container-low": "#f2f4f6",
-                      "primary": "#21537f",
-                      "surface-container-high": "#e6e8ea",
-                      "on-primary": "#ffffff",
-                      "secondary": "#805600",
-                      "surface-dim": "#d8dadc",
-                      "surface-tint": "#32618f",
-                      "outline-variant": "#c2c7d0",
-                      "on-primary-fixed": "#001d35",
-                      "surface-container": "#eceef0",
-                      "secondary-fixed-dim": "#f9bc5c",
-                      "on-secondary-fixed-variant": "#614000",
-                      "blue-light": "#7A9CC0",
-                      "text-hint": "#939CA6",
-                      "tertiary-fixed": "#dae3f2",
-                      "secondary-fixed": "#ffddb0",
-                      "on-background": "#191c1e",
-                      "blue-dark": "#2C4F73",
-                      "on-surface": "#191c1e",
-                      "on-error-container": "#93000a",
-                      "surface-container-highest": "#e0e3e5",
-                      "success": "#3E7C4F",
-                      "primary-fixed": "#d0e4ff",
-                      "on-secondary": "#ffffff",
-                      "surface-variant": "#e0e3e5",
-                      "on-surface-variant": "#42474f",
-                      "error-container": "#ffdad6",
-                      "secondary-container": "#ffc161",
-                      "amber-surface": "#FDF0DC",
-                      "on-primary-container": "#dae9ff",
-                      "on-tertiary": "#ffffff",
-                      "inverse-surface": "#2d3133",
-                      "amber-light": "#F5CB8A",
-                      "border-subtle": "#D5DAE0",
-                      "surface-bright": "#f8f9fb",
-                      "on-secondary-container": "#754e00",
-                      "outline": "#727780",
-                      "text-secondary": "#5C6672",
-                      "surface": "#f8f9fb",
-                      "on-primary-fixed-variant": "#144975",
-                      "inverse-on-surface": "#eff1f3",
-                      "on-error": "#ffffff",
-                      "tertiary": "#48515d",
-                      "background": "#f8f9fb",
-                      "tertiary-container": "#606975",
-                      "primary-container": "#3d6b99",
-                      "on-tertiary-container": "#e0e9f8",
-                      "inverse-primary": "#9ecafe",
-                      "surface-container-lowest": "#ffffff",
-                      "tertiary-fixed-dim": "#bec7d5",
-                      "on-secondary-fixed": "#281800",
-                      "primary-fixed-dim": "#9ecafe",
-                      "error": "#C0392B"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-              },
-              "spacing": {
-                      "xl": "32px",
-                      "unit": "4px",
-                      "md": "16px",
-                      "lg": "24px",
-                      "sm": "8px",
-                      "xs": "4px",
-                      "margin-mobile": "16px",
-                      "gutter": "16px",
-                      "margin-desktop": "24px"
-              },
-              "fontFamily": {
-                      "label-lg": ["Inter"],
-                      "body-lg": ["Inter"],
-                      "headline-lg-mobile": ["Space Grotesk"],
-                      "body-sm": ["Inter"],
-                      "body-md": ["Inter"],
-                      "label-sm": ["Inter"],
-                      "headline-sm": ["Space Grotesk"],
-                      "headline-md": ["Space Grotesk"],
-                      "headline-lg": ["Space Grotesk"],
-                      "body-emphasis": ["Inter"]
-              },
-              "fontSize": {
-                      "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
-                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                      "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "500"}],
-                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
-                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
-                      "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
-                      "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "500"}],
-                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
-                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "500"}],
-                      "body-emphasis": ["16px", {"lineHeight": "1.5", "fontWeight": "600"}]
-              }
-            },
-          },
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#3D6B99",
+                        "accent": "#F0B455",
+                        "text-main": "#2C3540",
+                        "bg-main": "#F4F6F8",
+                        "inverse-surface": "#2C3540",
+                        "blue-dark": "#2C4F73",
+                        "muted-text": "#5C6672",
+                        "outline": "#D5DAE0"
+                    },
+                    "fontFamily": {
+                        "body": ["Inter", "sans-serif"],
+                        "headline": ["Space Grotesk", "sans-serif"]
+                    },
+                    "spacing": {
+                        "section-padding": "80px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px"
+                    }
+                }
+            }
         }
     </script>
-<style>
-        body {
-            background-color: #F4F6F8;
-            color: #191C1E;
+    <style>
+        body { 
+            animation: pageFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; 
         }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .phone-mockup {
-            box-shadow: 0 50px 100px -20px rgba(0,0,0,0.1), 0 30px 60px -30px rgba(0,0,0,0.15);
+        @keyframes pageFadeIn { 
+            from { opacity: 0; transform: translateY(16px); } 
+            to { opacity: 1; transform: translateY(0); } 
         }
     </style>
-
-<style>
-    body { animation: pageFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-    @keyframes pageFadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-</style>
 </head>
-<body class="font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
-<!-- TopNavBar -->
-<header class="sticky top-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline/20">
-<div class="flex justify-between items-center w-full px-5 md:px-16 max-w-[1200px] mx-auto h-20">
-<div class="flex items-center gap-2">
-<a class="flex items-center" href="index.html">
+<body class="bg-bg-main text-text-main font-body selection:bg-primary/20 selection:text-primary overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-outline/20">
+        <div class="flex justify-between items-center w-full px-5 md:px-16 max-w-[1200px] mx-auto h-20">
+            <div class="flex items-center gap-2">
+                <a class="flex items-center" href="index.html">
                     <img src="assets/images/logo.svg" alt="Akranca" class="h-12 w-auto">
                 </a>
-</div>
-<nav class="hidden md:flex gap-8 items-center">
-<a class="text-muted-text hover:text-primary transition-colors font-medium text-sm py-1" href="index.html">Ana Sayfa</a>
-<a class="text-muted-text hover:text-primary transition-colors font-medium text-sm" href="hakkimizda.html">Hakkımızda</a>
-<a class="text-muted-text hover:text-primary transition-colors font-medium text-sm" href="pedagoglar.html">Uzmanlarımız</a>
-</nav>
-<div class="flex items-center gap-4">
-<a class="hidden md:block bg-primary text-on-primary px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-dark transition-all active:scale-95" href="katil.html">Topluluğa Katıl</a>
-<button class="md:hidden p-2 text-on-surface" id="menu-toggle">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
-</div>
-</div>
-<!-- Mobile Navigation -->
-<div class="md:hidden absolute top-20 left-0 w-full bg-surface border-b border-outline/20 flex-col p-5 gap-4 shadow-xl hidden" id="mobile-menu">
-<a class="text-muted-text font-medium text-base py-2" href="index.html">Ana Sayfa</a>
-<a class="text-muted-text font-medium text-base py-2" href="hakkimizda.html">Hakkımızda</a>
-<a class="text-muted-text font-medium text-base py-2" href="pedagoglar.html">Uzmanlarımız</a>
-<a class="bg-primary text-on-primary px-6 py-3 rounded-lg font-semibold text-center mt-2" href="katil.html">Topluluğa Katıl</a>
-</div>
-</header>
-<main class="max-w-[1440px] mx-auto px-margin-desktop space-y-32 py-16">
-<!-- Section 1: Hero -->
-<section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div class="space-y-lg">
-<span class="inline-block px-md py-1 bg-primary/10 text-primary border border-primary/20 rounded-full font-label-sm text-label-sm uppercase tracking-wide">Geliştiriliyor</span>
-<h1 class="font-headline-lg text-headline-lg text-on-background">Akranca uygulaması</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Uzman pedagogların ürettiği içerikler, tek bir uygulamada. Her yaştan gencin kendini ifade edebileceği güvenli bir alan.</p>
-<div class="pt-sm">
-<button class="px-xl py-md bg-primary-container text-on-primary rounded-lg font-label-lg text-label-lg shadow-sm hover:bg-blue-dark transition-all active:scale-[0.98]">
-                        Yayınlandığında haberim olsun
-                    </button>
-</div>
-</div>
-<div class="relative flex justify-center lg:justify-end">
-<div class="w-72 h-[580px] bg-slate-900 rounded-[3rem] border-[8px] border-slate-800 phone-mockup relative overflow-hidden">
-<!-- Screen Content -->
-<div class="absolute inset-0 bg-surface flex flex-col p-6 space-y-6">
-<!-- Abstract blocks simulating app content -->
-<div class="w-full h-8 bg-surface-container-high rounded-full"></div>
-<div class="space-y-3">
-<div class="w-full h-32 bg-blue-surface rounded-xl flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-4xl">play_circle</span>
-</div>
-<div class="w-3/4 h-3 bg-surface-container-highest rounded-full"></div>
-<div class="w-1/2 h-3 bg-surface-container-highest rounded-full opacity-50"></div>
-</div>
-<div class="grid grid-cols-2 gap-4">
-<div class="aspect-square bg-amber-surface rounded-xl p-4 flex flex-col justify-between">
-<div class="w-8 h-8 bg-secondary-container/50 rounded-full"></div>
-<div class="w-12 h-2 bg-on-secondary-container/30 rounded-full"></div>
-</div>
-<div class="aspect-square bg-surface-container rounded-xl p-4 flex flex-col justify-between">
-<div class="w-8 h-8 bg-outline-variant/50 rounded-full"></div>
-<div class="w-12 h-2 bg-outline-variant/30 rounded-full"></div>
-</div>
-</div>
-<div class="w-full h-40 bg-surface-container-low rounded-xl border border-border-subtle p-4 space-y-3">
-<div class="w-full h-2 bg-outline-variant/20 rounded-full"></div>
-<div class="w-full h-2 bg-outline-variant/20 rounded-full"></div>
-<div class="w-2/3 h-2 bg-outline-variant/20 rounded-full"></div>
-</div>
-</div>
-<!-- Notch -->
-<div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-800 rounded-b-2xl"></div>
-</div>
-</div>
-</section>
-<!-- Section 2: Nasıl Çalışır -->
-<section class="space-y-lg">
-<h2 class="font-headline-md text-headline-md text-center">Nasıl Çalışır?</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-12">
-<div class="bg-surface-container-lowest p-lg rounded-xl border border-border-subtle flex flex-col items-center text-center space-y-md">
-<div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm">1</div>
-<h3 class="font-body-emphasis text-body-emphasis">Rolünü seç</h3>
-<p class="text-on-surface-variant text-body-sm">Öğrenci, veli veya öğretmen rolünü seçerek başla. Kayıt gerektirmez.</p>
-</div>
-<div class="bg-surface-container-lowest p-lg rounded-xl border border-border-subtle flex flex-col items-center text-center space-y-md">
-<div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm">2</div>
-<h3 class="font-body-emphasis text-body-emphasis">İçerikleri gör</h3>
-<p class="text-on-surface-variant text-body-sm">Sadece senin rolüne uygun, pedagoglar tarafından hazırlanan içerikleri keşfet.</p>
-</div>
-<div class="bg-surface-container-lowest p-lg rounded-xl border border-border-subtle flex flex-col items-center text-center space-y-md">
-<div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm">3</div>
-<h3 class="font-body-emphasis text-body-emphasis">Faydalıları kaydet</h3>
-<p class="text-on-surface-variant text-body-sm">İlgini çeken ve faydalı bulduğun içerikleri daha sonra incelemek üzere kaydet.</p>
-</div>
-</div>
-</section>
-<!-- Section 3: Özellikler -->
-<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="bg-surface-container p-lg rounded-xl flex flex-col gap-md">
-<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
-<h4 class="font-body-emphasis text-body-emphasis">Doğrulanmış İçerik</h4>
-<p class="text-body-sm text-on-surface-variant leading-relaxed">Tüm içerikler alanında uzman pedagoglar ve eğitimciler tarafından titizlikle hazırlanmaktadır.</p>
-</div>
-<div class="bg-surface-container p-lg rounded-xl flex flex-col gap-md">
-<span class="material-symbols-outlined text-primary text-3xl">account_circle</span>
-<h4 class="font-body-emphasis text-body-emphasis">Rol Bazlı Akış</h4>
-<p class="text-body-sm text-on-surface-variant leading-relaxed">Öğrenci, veli ve öğretmenlere özel özelleştirilmiş bilgi akışı ile ihtiyacınız olana hızlıca ulaşın.</p>
-</div>
-<div class="bg-surface-container p-lg rounded-xl flex flex-col gap-md">
-<span class="material-symbols-outlined text-primary text-3xl">lock</span>
-<h4 class="font-body-emphasis text-body-emphasis">%100 Gizlilik</h4>
-<p class="text-body-sm text-on-surface-variant leading-relaxed">Kayıt gerektirmez, kişisel verileriniz toplanmaz ve izlenmez. Sadece bilgiye odaklanın.</p>
-</div>
-</section>
-<!-- Section 4: İçerik Formatları -->
-<section class="space-y-lg">
-<h2 class="font-headline-sm text-headline-sm">Zengin İçerik Formatları</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="bg-surface-container-lowest p-md border border-border-subtle rounded-xl flex items-center gap-md">
-<div class="w-12 h-12 flex-shrink-0 bg-blue-surface rounded-lg flex items-center justify-center">
-<span class="material-symbols-outlined text-primary">videocam</span>
-</div>
-<div>
-<h5 class="font-body-emphasis text-body-emphasis">Kısa video</h5>
-<p class="text-label-sm text-on-surface-variant">Hızlı ve etkili görsel anlatımlar.</p>
-</div>
-</div>
-<div class="bg-surface-container-lowest p-md border border-border-subtle rounded-xl flex items-center gap-md">
-<div class="w-12 h-12 flex-shrink-0 bg-amber-surface rounded-lg flex items-center justify-center">
-<span class="material-symbols-outlined text-secondary">image</span>
-</div>
-<div>
-<h5 class="font-body-emphasis text-body-emphasis">Görsel</h5>
-<p class="text-label-sm text-on-surface-variant">Bilgilendirici grafikler ve infografikler.</p>
-</div>
-</div>
-<div class="bg-surface-container-lowest p-md border border-border-subtle rounded-xl flex items-center gap-md">
-<div class="w-12 h-12 flex-shrink-0 bg-surface-container-high rounded-lg flex items-center justify-center">
-<span class="material-symbols-outlined text-on-surface-variant">article</span>
-</div>
-<div>
-<h5 class="font-body-emphasis text-body-emphasis">Yazı</h5>
-<p class="text-label-sm text-on-surface-variant">Derinlemesine rehberler ve makaleler.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Section 5: Geliştirme Durumu -->
-<section class="max-w-2xl mx-auto bg-surface-container-lowest p-xl rounded-xl border border-border-subtle space-y-lg">
-<div class="flex items-center gap-md">
-<span class="material-symbols-outlined text-primary">engineering</span>
-<h2 class="font-headline-sm text-headline-sm">Geliştirme Durumu</h2>
-</div>
-<ul class="space-y-md">
-<li class="flex items-center gap-md text-success font-body-emphasis">
-<span class="material-symbols-outlined">check_circle</span>
-                    Tasarım tamamlandı
-                </li>
-<li class="flex items-center gap-md text-success font-body-emphasis">
-<span class="material-symbols-outlined">check_circle</span>
-                    Geliştirme başladı
-                </li>
-<li class="flex items-center gap-md text-on-surface-variant opacity-60">
-<span class="material-symbols-outlined">radio_button_unchecked</span>
-                    Kapalı beta
-                </li>
-<li class="flex items-center gap-md text-on-surface-variant opacity-60">
-<span class="material-symbols-outlined">radio_button_unchecked</span>
-                    Mağazada yayın
-                </li>
-</ul>
-<div class="pt-md">
-<button class="w-full md:w-auto px-lg py-sm border border-primary text-primary rounded-lg font-label-lg text-label-lg hover:bg-primary/5 transition-colors">
-                    Yayınlandığında haberim olsun
+            </div>
+            <nav class="hidden md:flex gap-8 items-center">
+                <a class="text-muted-text hover:text-primary transition-colors font-medium text-sm py-1" href="index.html">Ana Sayfa</a>
+                <a class="text-muted-text hover:text-primary transition-colors font-medium text-sm" href="hakkimizda.html">Hakkımızda</a>
+                <a class="text-muted-text hover:text-primary transition-colors font-medium text-sm" href="pedagoglar.html">Uzmanlarımız</a>
+<a class="text-primary border-b-2 border-primary transition-colors font-semibold text-sm py-1" href="uygulama.html">Uygulama</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a class="hidden md:block bg-primary text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-dark transition-all active:scale-95" href="katil.html">Topluluğa Katıl</a>
+                <button class="md:hidden p-2 text-text-main" id="menu-toggle">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
                 </button>
-</div>
-</section>
-<!-- Section 6: Closing CTA -->
-<section class="bg-primary text-on-primary p-xl rounded-xl text-center space-y-lg relative overflow-hidden">
-<!-- Decorative circle -->
-<div class="absolute -right-20 -top-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-<div class="relative z-10 space-y-md">
-<p class="font-headline-md text-headline-md max-w-2xl mx-auto">Topluluğumuza katılarak bu yolculuğun bir parçası olun.</p>
-<div class="pt-md">
-<a class="inline-block px-xl py-md bg-amber-light text-on-secondary-fixed rounded-lg font-label-lg text-label-lg hover:scale-105 transition-transform" href="katil.html">
-                        Topluluğa Katıl
-                    </a>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-inverse-surface py-section-padding text-inverse-on-surface transition-colors">
+            </div>
+        </div>
+        <!-- Mobile Navigation -->
+        <div class="md:hidden absolute top-20 left-0 w-full bg-white border-b border-outline/20 flex-col p-5 gap-4 shadow-xl hidden" id="mobile-menu">
+            <a class="text-muted-text font-medium text-base py-2" href="index.html">Ana Sayfa</a>
+            <a class="text-muted-text font-medium text-base py-2" href="hakkimizda.html">Hakkımızda</a>
+            <a class="text-muted-text font-medium text-base py-2" href="pedagoglar.html">Uzmanlarımız</a>
+<a class="text-primary font-semibold text-base py-2" href="uygulama.html">Uygulama</a>
+            <a class="bg-primary text-white px-6 py-3 rounded-lg font-semibold text-center mt-2" href="katil.html">Topluluğa Katıl</a>
+        </div>
+    </header>
+
+    <main class="w-full">
+        <!-- Section 1: Hero -->
+        <section class="max-w-[1200px] mx-auto px-5 md:px-16 py-16 md:py-32">
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                <div class="flex-1 space-y-8 text-center lg:text-left">
+                    <span class="inline-block border border-primary/20 text-primary font-semibold text-sm px-4 py-1.5 uppercase tracking-widest">Geliştiriliyor</span>
+                    <h1 class="font-headline text-5xl md:text-6xl text-text-main">Akranca uygulaması</h1>
+                    <p class="text-lg md:text-xl text-muted-text max-w-lg mx-auto lg:mx-0">
+                        uzman pedagogların ürettiği içerikler, tek bir uygulamada
+                    </p>
+                    <div class="pt-4">
+                        <button class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-dark transition-colors">
+                            Yayınlandığında haberim olsun
+                        </button>
+                    </div>
+                </div>
+                <div class="flex-1 flex justify-center lg:justify-end w-full">
+                    <!-- Abstract Phone Mockup -->
+                    <div class="w-[300px] h-[600px] bg-[#1a222c] rounded-[2.5rem] border-8 border-[#25303d] relative overflow-hidden shadow-2xl flex flex-col">
+                        <div class="absolute top-0 inset-x-0 h-7 bg-[#25303d] w-32 mx-auto rounded-b-xl z-10"></div>
+                        <div class="flex-1 p-6 flex flex-col gap-5 pt-12">
+                            <!-- Abstract blocks -->
+                            <div class="w-2/3 h-6 bg-white/10 rounded"></div>
+                            <div class="w-full aspect-video bg-primary/20 rounded-xl border border-primary/30 flex items-center justify-center">
+                                <div class="w-12 h-12 rounded-full bg-primary/40 flex items-center justify-center">
+                                    <div class="w-0 h-0 border-t-8 border-t-transparent border-l-[14px] border-l-white border-b-8 border-b-transparent ml-1"></div>
+                                </div>
+                            </div>
+                            <div class="w-full h-16 bg-white/5 rounded-xl border border-white/5 flex items-center px-4 gap-4">
+                                <div class="w-10 h-10 bg-accent rounded-full"></div>
+                                <div class="space-y-2 flex-1">
+                                    <div class="h-2 w-3/4 bg-white/20 rounded"></div>
+                                    <div class="h-2 w-1/2 bg-white/10 rounded"></div>
+                                </div>
+                            </div>
+                            <div class="w-full h-16 bg-white/5 rounded-xl border border-white/5 flex items-center px-4 gap-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-full"></div>
+                                <div class="space-y-2 flex-1">
+                                    <div class="h-2 w-2/3 bg-white/20 rounded"></div>
+                                    <div class="h-2 w-1/3 bg-white/10 rounded"></div>
+                                </div>
+                            </div>
+                            <div class="flex-1"></div>
+                            <div class="w-full h-12 bg-primary rounded-lg opacity-80"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Nasıl Çalışır -->
+        <section class="max-w-[1000px] mx-auto px-5 md:px-16 py-16 md:py-24">
+            <h2 class="font-headline text-3xl md:text-4xl text-center mb-16">Nasıl çalışır?</h2>
+            <div class="space-y-12">
+                <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-start">
+                    <div class="text-6xl font-headline text-accent opacity-50 font-bold shrink-0">1</div>
+                    <div class="pt-2">
+                        <h3 class="text-xl font-bold mb-2">Rolünü seç</h3>
+                        <p class="text-muted-text text-lg leading-relaxed">Öğrenci, veli veya öğretmen rollerinden sana uygun olanı seç. Uygulamayı kullanmak için herhangi bir kayıt gerekmez.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-start md:ml-12 lg:ml-24">
+                    <div class="text-6xl font-headline text-accent opacity-50 font-bold shrink-0">2</div>
+                    <div class="pt-2">
+                        <h3 class="text-xl font-bold mb-2">Rolüne uygun içerikleri gör</h3>
+                        <p class="text-muted-text text-lg leading-relaxed">Seçtiğin role özel hazırlanmış, doğrulanmış ve yaşa uygun içerik akışını keşfet.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-start md:ml-24 lg:ml-48">
+                    <div class="text-6xl font-headline text-accent opacity-50 font-bold shrink-0">3</div>
+                    <div class="pt-2">
+                        <h3 class="text-xl font-bold mb-2">Faydalı bulduklarını kaydet</h3>
+                        <p class="text-muted-text text-lg leading-relaxed">Daha sonra tekrar bakmak istediğin içerikleri cihazına yerel olarak kaydet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Özellikler (Asymmetrical) -->
+        <section class="max-w-[1200px] mx-auto px-5 md:px-16 py-16 md:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div class="lg:col-span-2 bg-white rounded-xl p-10 md:p-16 border border-outline/30 flex flex-col justify-center">
+                    <h3 class="font-headline text-2xl md:text-3xl mb-4">Doğrulanmış pedagogların ürettiği içerikler</h3>
+                    <p class="text-muted-text text-lg leading-relaxed">Uygulamadaki tüm bilgiler ve yönlendirmeler, alanında uzman profesyoneller tarafından hazırlanır ve denetlenir.</p>
+                </div>
+                <div class="flex flex-col gap-6 lg:gap-8">
+                    <div class="bg-white rounded-xl p-8 border border-outline/30 flex-1 flex flex-col justify-center">
+                        <h3 class="font-headline text-xl mb-2">Rol bazlı içerik akışı</h3>
+                        <p class="text-muted-text">Sadece kendi rolüne uygun paylaşımları gör.</p>
+                    </div>
+                    <div class="bg-primary text-white rounded-xl p-8 flex-1 flex flex-col justify-center">
+                        <h3 class="font-headline text-xl mb-2 text-white">Kayıt gerektirmez, kişisel veri toplanmaz</h3>
+                        <p class="text-white/80">Anonim kalarak uygulamayı kullanabilirsin.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: İçerik Formatları -->
+        <section class="max-w-[1200px] mx-auto px-5 md:px-16 py-20 md:py-32 border-t border-b border-outline/20 my-16">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
+                <h3 class="font-headline text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-primary">kısa video</h3>
+                <span class="hidden md:block text-3xl text-outline font-bold">·</span>
+                <h3 class="font-headline text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-accent">görsel</h3>
+                <span class="hidden md:block text-3xl text-outline font-bold">·</span>
+                <h3 class="font-headline text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-text-main">yazı</h3>
+            </div>
+        </section>
+
+        <!-- Section 5: Geliştirme Durumu -->
+        <section class="max-w-[800px] mx-auto px-5 md:px-16 py-16 md:py-24">
+            <h2 class="font-headline text-3xl mb-12">Geliştirme durumu</h2>
+            <div class="space-y-6">
+                <div class="flex items-center gap-4 border-b border-outline/20 pb-6">
+                    <span class="material-symbols-outlined text-primary text-2xl">check</span>
+                    <span class="text-xl font-medium">Tasarım tamamlandı</span>
+                </div>
+                <div class="flex items-center gap-4 border-b border-outline/20 pb-6">
+                    <span class="material-symbols-outlined text-primary text-2xl">check</span>
+                    <span class="text-xl font-medium">Geliştirme başladı</span>
+                </div>
+                <div class="flex items-center gap-4 border-b border-outline/20 pb-6">
+                    <span class="material-symbols-outlined text-outline text-2xl">radio_button_unchecked</span>
+                    <span class="text-xl text-muted-text">Kapalı beta</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="material-symbols-outlined text-outline text-2xl">radio_button_unchecked</span>
+                    <span class="text-xl text-muted-text">Mağazada yayın</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Closing CTA -->
+        <section class="max-w-[1200px] mx-auto px-5 md:px-16 py-16 md:py-32 mb-16 text-center">
+            <h2 class="font-headline text-3xl md:text-4xl mb-8">Topluluğa katıl ve gelişmelerden haberdar ol.</h2>
+            <a href="katil.html" class="inline-block bg-text-main text-white px-10 py-4 rounded-lg font-semibold hover:bg-black transition-colors">
+                Topluluğa Katıl
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-inverse-surface py-section-padding text-inverse-on-surface transition-colors">
 <div class="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-16 px-5 md:px-16 max-w-[1200px] mx-auto">
 <div class="w-full lg:w-1/3">
 <img src="assets/images/logo-white.svg" alt="Akranca" class="h-10 md:h-12 w-auto max-w-[200px] object-contain object-left mb-6">
@@ -369,52 +263,18 @@ Okulda ve hayatta akran zorbalığına karşı profesyonel ve toplumsal çözüm
 <p class="font-label-sm text-label-sm text-white/60">© 2026 Akranca. Tüm hakları saklıdır.</p>
 </div>
 </footer>
-<script>
-        // Micro-interaction for buttons
-        document.querySelectorAll('button, a').forEach(elem => {
-            elem.addEventListener('mousedown', () => {
-                elem.style.transform = 'scale(0.97)';
-            });
-            elem.addEventListener('mouseup', () => {
-                elem.style.transform = '';
-            });
-            elem.addEventListener('mouseleave', () => {
-                elem.style.transform = '';
-            });
-        });
-
-        // Simple scroll animation for visibility
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-8');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
-            observer.observe(section);
-        });
-
-        // Mobile Menu Toggle Logic
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuToggle = document.getElementById('menu-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            if (menuToggle && mobileMenu) {
-                menuToggle.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                    mobileMenu.classList.toggle('flex');
-                    const icon = menuToggle.querySelector('.material-symbols-outlined');
-                    icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
-                });
-            }
-        });
-    </script>
-</body></html>
+270:     <script>
+271:         const menuToggle = document.getElementById('menu-toggle');
+272:         const mobileMenu = document.getElementById('mobile-menu');
+273: 
+274:         if (menuToggle && mobileMenu) {
+275:             menuToggle.addEventListener('click', () => {
+276:                 mobileMenu.classList.toggle('hidden');
+277:                 mobileMenu.classList.toggle('flex');
+278:                 const icon = menuToggle.querySelector('.material-symbols-outlined');
+279:                 icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+280:             });
+281:         }
+282:     </script>
+283: </body>
+284: </html>
