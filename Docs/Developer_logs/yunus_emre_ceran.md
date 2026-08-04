@@ -1,4 +1,4 @@
-﻿## 2026-07-30 -- 22:54 (TR)
+## 2026-07-30 -- 22:54 (TR)
 
 **Branch:** `feature/organize-stitch-files`
 
@@ -42,3 +42,12 @@
 - Tailwind config dosyalarındaki farklılıklardan kaynaklanan "görünmez metin" (boş footer) hatası engellendi; metin renkleri doğrudan Tailwind'in kalıcı 	ext-white utility sınıflarına bağlandı.
 - Footer içindeki sosyal medya linklerine Instagram, X, YouTube ve LinkedIn SVG ikonları eklendi.
 - Sayfalar arası geçişi yumuşatmak için CSS tabanlı global bir pageFadeIn animasyonu sisteme entegre edildi.
+
+### 05.08.2026 - 02:35 (TR)
+**Branch:** `feature/update-hero-content`
+
+#### Yeni Başvuru Sayfası ve Google Apps Script Entegrasyonu
+- `basvuru.html` sayfası oluşturuldu: Akranca tasarım diline ve marka rehberine tam uyumlu, ortalanmış (`max-w-[500px]`), 4 alanlı (Başvuru Türü, Ad Soyad, E-posta, LinkedIn) başvuru formu hazırlandı.
+- Google Apps Script (`doPost`) entegrasyonu tamamlandı: Fetch API ve `URLSearchParams` kullanılarak CORS uyumlu form gönderimi, dinamik buton loading state (`Gönderiliyor...`) ve başarı/hata geri bildirim mesajları uygulandı.
+- Sayfa yönlendirmeleri güncellendi: `index.html`, `hakkimizda.html` ve `pedagoglar.html` sayfalarındaki "Gönüllü Ol" ve "Uzman Olarak Katıl" CTA butonları `katil.html` yerine `basvuru.html` sayfasına yönlendirildi.
+

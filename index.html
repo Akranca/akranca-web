@@ -1,12 +1,19 @@
-﻿<!DOCTYPE html><html class="scroll-smooth" lang="tr"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Akranca | Akran Zorbalığına Birlikte Dur Diyelim</title>
-<link href="assets/images/icon.svg" rel="icon" type="image/svg+xml">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script id="tailwind-config">
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Akranca | Akran Zorbalığına Birlikte Dur Diyelim</title>
+    <link href="assets/images/icon.svg" rel="icon" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -53,13 +60,26 @@
             },
         }
     </script>
-<style>
-        body { font-family: 'Inter', sans-serif; font-weight: 400; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; font-weight: 500; }
-        
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+        }
+
         .navy-duotone {
             position: relative;
         }
+
         .navy-duotone::after {
             content: "";
             position: absolute;
@@ -67,6 +87,7 @@
             background-color: rgba(61, 107, 153, 0.4);
             mix-blend-mode: multiply;
         }
+
         .navy-duotone::before {
             content: "";
             position: absolute;
@@ -74,21 +95,26 @@
             background-color: rgba(61, 107, 153, 0.2);
             mix-blend-mode: screen;
         }
+
         .glass-card {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
+
         .card-shadow {
             box-shadow: 0 4px 20px rgba(61, 107, 153, 0.08);
         }
+
         /* Mobile Menu Toggle */
         #mobile-menu {
             display: none;
         }
+
         #mobile-menu.active {
             display: flex;
         }
+
         .hero-line {
             width: 1px;
             background: linear-gradient(to bottom, transparent, #3D6B99, transparent);
@@ -96,279 +122,338 @@
         }
     </style>
 
-<style>
-    body { animation: pageFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-    @keyframes pageFadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-</style>
+    <style>
+        body {
+            animation: pageFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes pageFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
+
 <body class="bg-background text-on-surface selection:bg-blue-very-light selection:text-blue-dark">
-<!-- TopNavBar -->
-<header class="sticky top-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline/20">
-<div class="flex justify-between items-center w-full px-5 md:px-16 max-w-[1200px] mx-auto h-20">
-<div class="flex items-center gap-2">
-<a class="flex items-center" href="index.html">
+    <!-- TopNavBar -->
+    <header class="sticky top-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline/20">
+        <div class="flex justify-between items-center w-full px-5 md:px-16 max-w-[1200px] mx-auto h-20">
+            <div class="flex items-center gap-2">
+                <a class="flex items-center" href="index.html">
                     <img src="assets/images/logo.svg" alt="Akranca" class="h-12 w-auto">
                 </a>
-</div>
-<nav class="hidden md:flex gap-8 items-center">
-<a class="text-primary border-b-2 border-primary transition-colors font-semibold text-sm py-1" href="index.html">Ana Sayfa</a>
-<a class="text-muted-text hover:text-primary transition-colors font-medium text-sm" href="hakkimizda.html">Hakkımızda</a>
-<a class="text-muted-text hover:text-primary transition-colors font-medium text-sm" href="pedagoglar.html">Uzmanlarimiz</a>
-<a class="text-muted-text hover:text-primary transition-colors font-medium text-sm" href="uygulama.html">Uygulama</a>
-</nav>
-<div class="flex items-center gap-4">
-<a class="hidden md:block bg-primary text-on-primary px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-dark transition-all active:scale-95" href="katil.html">Topluluğa Katıl</a>
-<button class="md:hidden p-2 text-on-surface" id="menu-toggle">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
-</div>
-</div>
-<!-- Mobile Navigation -->
-<div class="md:hidden absolute top-20 left-0 w-full bg-surface border-b border-outline/20 flex-col p-5 gap-4 shadow-xl" id="mobile-menu">
-<a class="text-primary font-semibold text-base py-2" href="index.html">Ana Sayfa</a>
-<a class="text-muted-text font-medium text-base py-2" href="hakkimizda.html">Hakkımızda</a>
-<a class="text-muted-text font-medium text-base py-2" href="pedagoglar.html">Uzmanlarimiz</a>
-<a class="text-muted-text font-medium text-base py-2" href="uygulama.html">Uygulama</a>
-<a class="bg-primary text-on-primary px-6 py-3 rounded-lg font-semibold text-center mt-2" href="katil.html">Topluluğa Katıl</a>
-</div>
-</header>
-<main>
-<!-- Hero Section -->
-<section class="relative min-h-[75vh] flex items-center overflow-hidden py-24">
-<div class="max-w-[1200px] mx-auto px-5 md:px-16 w-full relative z-10 transition-all duration-1000 opacity-100 translate-y-0">
-<div class="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8">
-<div class="flex items-center gap-4">
-<div class="h-[1px] w-12 bg-primary/30"></div>
-<span class="text-primary font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs">Geleceğimiz İçin Dayanışma</span>
-<div class="h-[1px] w-12 bg-primary/30"></div>
-</div>
-<h1 class="text-4xl md:text-6xl lg:text-7xl leading-[1.1] text-primary tracking-tight font-medium">
-                    Akran Zorbalığına <br>
-<span class="text-on-background opacity-90">Birlikte Dur Diyelim</span>
-</h1>
-<p class="text-lg md:text-xl text-muted-text max-w-2xl font-normal leading-relaxed">
-                    Gençler, aileler ve eğitimciler için güvenli bir topluluk. <br class="hidden md:block">
-                    Sesini duyur, doğru bilgiye ulaş ve değişimin parçası ol.
-</p>
-<div class="flex flex-col items-center gap-6 pt-4">
-<a class="bg-primary text-on-primary px-10 py-4 rounded-lg font-semibold hover:shadow-2xl hover:-translate-y-0.5 active:scale-95 transition-all inline-block text-lg" href="katil.html">Topluluğa Katıl</a>
+            </div>
+            <nav class="hidden md:flex gap-8 items-center">
+                <a class="text-primary border-b-2 border-primary transition-colors font-semibold text-sm py-1"
+                    href="index.html">Ana Sayfa</a>
+                <a class="text-muted-text hover:text-primary transition-colors font-medium text-sm"
+                    href="hakkimizda.html">Hakkımızda</a>
+                <a class="text-muted-text hover:text-primary transition-colors font-medium text-sm"
+                    href="pedagoglar.html">Uzmanlarımız</a>
+                <a class="text-muted-text hover:text-primary transition-colors font-medium text-sm"
+                    href="uygulama.html">Uygulama</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a class="hidden md:block bg-primary text-on-primary px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-dark transition-all active:scale-95"
+                    href="katil.html">Topluluğa Katıl</a>
+                <button class="md:hidden p-2 text-on-surface" id="menu-toggle">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navigation -->
+        <div class="md:hidden absolute top-20 left-0 w-full bg-surface border-b border-outline/20 flex-col p-5 gap-4 shadow-xl"
+            id="mobile-menu">
+            <a class="text-primary font-semibold text-base py-2" href="index.html">Ana Sayfa</a>
+            <a class="text-muted-text font-medium text-base py-2" href="hakkimizda.html">Hakkımızda</a>
+            <a class="text-muted-text font-medium text-base py-2" href="pedagoglar.html">Uzmanlarimiz</a>
+            <a class="text-muted-text font-medium text-base py-2" href="uygulama.html">Uygulama</a>
+            <a class="bg-primary text-on-primary px-6 py-3 rounded-lg font-semibold text-center mt-2"
+                href="katil.html">Topluluğa Katıl</a>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-[75vh] flex items-center overflow-hidden py-24">
+            <div
+                class="max-w-[1200px] mx-auto px-5 md:px-16 w-full relative z-10 transition-all duration-1000 opacity-100 translate-y-0">
+                <div class="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8">
+                    <div class="flex items-center gap-4">
+                        <div class="h-[1px] w-12 bg-primary/30"></div>
+                        <span
+                            class="text-primary font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs">SESSİZLİĞİ
+                            BOZMAK İÇİN</span>
+                        <div class="h-[1px] w-12 bg-primary/30"></div>
+                    </div>
+                    <h1
+                        class="text-4xl md:text-6xl lg:text-7xl leading-[1.1] text-on-background tracking-tight font-medium">
+                        Zorbalık <br>
+                        <span class="text-[#153552] font-semibold">sessizlikte büyür.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-muted-text max-w-2xl font-normal leading-relaxed">
+                        Akranca, akran zorbalığı hakkında doğru bilgiyi öğrencilere, velilere ve öğretmenlere ulaştıran
+                        bir topluluk.
+                    </p>
+                    <div class="flex flex-col items-center gap-6 pt-4">
+                        <a class="bg-primary text-on-primary px-10 py-4 rounded-lg font-semibold hover:shadow-2xl hover:-translate-y-0.5 active:scale-95 transition-all inline-block text-lg"
+                            href="katil.html">Topluluğa Katıl</a>
 
-</div>
-</div>
-</div>
-<!-- Minimalist Decorative Elements -->
-<div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-primary/5 to-transparent -z-10 transition-all duration-1000 opacity-100 translate-y-0"></div>
-<div class="absolute top-1/4 left-10 md:left-24 w-px h-32 bg-primary/20 -z-10 transition-all duration-1000 opacity-100 translate-y-0"></div>
-<div class="absolute bottom-1/4 right-10 md:right-24 w-px h-32 bg-primary/20 -z-10 transition-all duration-1000 opacity-100 translate-y-0"></div>
-<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 blur-[120px] rounded-full -z-10 transition-all duration-1000 opacity-100 translate-y-0"></div>
-<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/5 blur-[120px] rounded-full -z-10 transition-all duration-1000 opacity-100 translate-y-0"></div>
-</section>
-<!-- The Problem (Stats) -->
-<section class="bg-surface py-section-padding" id="problem">
-<div class="max-w-[1200px] mx-auto px-5 md:px-16 transition-all duration-1000 opacity-100 translate-y-0">
-<div class="text-center mb-16 space-y-4">
-<h2 class="text-3xl md:text-4xl text-on-background">Sessiz Kalmayın</h2>
-<p class="text-base text-muted-text max-w-2xl mx-auto">Zorbalık sadece fiziksel değildir; duygusal, sosyal ve siber alanlarda da hayatlarımızı etkiler.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Stat Card 1 -->
-<div class="bg-background p-10 rounded-xl card-shadow border-t-4 border-primary">
-<h3 class="text-5xl text-primary mb-2">1/3</h3>
-<p class="text-xl mb-4 text-on-background">Zorbalığa Uğrayan</p>
-<p class="text-sm text-muted-text mb-4">Her 3 öğrenciden biri hayatının bir noktasında akran zorbalığına maruz kaldığını belirtiyor.</p>
-<p class="text-xs text-muted-text mt-auto italic">Kaynak: [doldurulacak]</p>
-</div>
-<!-- Stat Card 2 -->
-<div class="bg-background p-10 rounded-xl card-shadow border-t-4 border-secondary">
-<h3 class="text-5xl text-primary mb-2">60%</h3>
-<p class="text-xl mb-4 text-on-background">Siber Zorbalık</p>
-<p class="text-sm text-muted-text mb-4">Gençlerin büyük bir çoğunluğu dijital platformlarda olumsuz davranışlarla karşılaşıyor.</p>
-<p class="text-xs text-muted-text mt-auto italic">Kaynak: [doldurulacak]</p>
-</div>
-<!-- Stat Card 3 -->
-<div class="bg-background p-10 rounded-xl card-shadow border-t-4 border-blue-light">
-<h3 class="text-5xl text-primary mb-2">4/5</h3>
-<p class="text-xl mb-4 text-on-background">Tanık Olan</p>
-<p class="text-sm text-muted-text mb-4">Tanık olanların çoğu nasıl müdahale edeceğini bilmediği için sessiz kalmayı tercih ediyor.</p>
-<p class="text-xs text-muted-text mt-auto italic">Kaynak: [doldurulacak]</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Who it's for -->
-<section class="py-section-padding bg-background" id="audience">
-<div class="max-w-[1200px] mx-auto px-5 md:px-16">
-<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-<div class="max-w-xl">
-<div class="flex items-center gap-3 mb-3">
-<div class="h-px w-8 bg-primary/30"></div>
-<span class="text-primary font-semibold text-xs uppercase tracking-widest">Hedef Kitle</span>
-</div>
-<h2 class="text-3xl text-on-background mb-3">Kimler İçin?</h2>
-<p class="text-base text-muted-text">İçerikler öğrenci, veli ve öğretmen için ayrı ayrı hazırlanıyor.</p>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<!-- Öğrenciler -->
-<div class="group bg-blue-very-light rounded-2xl p-8 card-shadow border border-blue-very-light hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-<div class="flex items-start justify-between mb-6">
-<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-colors">
-<span class="material-symbols-outlined text-primary" style="font-size:28px;font-variation-settings:'FILL' 0,'wght' 300">face</span>
-</div>
-<span class="inline-block bg-amber-very-light text-on-secondary rounded-full px-3 py-1 text-xs font-semibold border border-amber-light/40">Öğrenci</span>
-</div>
-<h3 class="text-xl text-on-background mb-3">Öğrenciler</h3>
-<p class="text-sm text-muted-text leading-relaxed mb-5">Zorbalığa uğradığında veya tanık olduğunda ne yapabileceğini uzmanlardan öğren. Güçlü ol.</p>
-<ul class="space-y-2.5 mt-auto">
-<li class="flex items-start gap-2.5 text-sm text-muted-text"><span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5" style="font-size:16px">check_circle</span>Nasıl müdahale edeceğini öğren</li>
-<li class="flex items-start gap-2.5 text-sm text-muted-text"><span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5" style="font-size:16px">check_circle</span>Güvendiğin kişilere nasıl ulaşırsın</li>
-<li class="flex items-start gap-2.5 text-sm text-muted-text"><span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5" style="font-size:16px">check_circle</span>Kendin ve arkadaşların için güçlen</li>
-</ul>
-</div>
-<!-- Veliler -->
-<div class="group bg-amber-very-light rounded-2xl p-8 card-shadow border border-amber-very-light hover:border-secondary/40 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-<div class="flex items-start justify-between mb-6">
-<div class="w-14 h-14 rounded-xl flex items-center justify-center group-hover:opacity-90 transition-opacity" style="background:rgba(240,180,85,.2)">
-<span class="material-symbols-outlined text-on-secondary" style="font-size:28px;font-variation-settings:'FILL' 0,'wght' 300;color:#7A5C1E">family_restroom</span>
-</div>
-<span class="inline-block bg-blue-very-light text-primary rounded-full px-3 py-1 text-xs font-semibold border border-primary/20">Veli</span>
-</div>
-<h3 class="text-xl text-on-background mb-3">Veliler</h3>
-<p class="text-sm text-muted-text leading-relaxed mb-5">Çocuğunuzu korumak için rehberler edinin, uyarı işaretlerini öğrenin ve uzman tavsiyelerini inceleyin.</p>
-<ul class="space-y-2.5 mt-auto">
-<li class="flex items-start gap-2.5 text-sm text-muted-text"><span class="material-symbols-outlined flex-shrink-0 mt-0.5" style="font-size:16px;color:#A0731A">check_circle</span>Uyarı işaretlerini fark et</li>
-<li class="flex items-start gap-2.5 text-sm text-muted-text"><span class="material-symbols-outlined flex-shrink-0 mt-0.5" style="font-size:16px;color:#A0731A">check_circle</span>Çocuğunuzla nasıl konuşursunuz</li>
-<li class="flex items-start gap-2.5 text-sm text-muted-text"><span class="material-symbols-outlined flex-shrink-0 mt-0.5" style="font-size:16px;color:#A0731A">check_circle</span>Okul ile nasıl iletişim kurarsınız</li>
-</ul>
-</div>
-<!-- Öğretmenler -->
-<div class="group bg-surface rounded-2xl p-8 card-shadow border border-outline/30 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-<div class="flex items-start justify-between mb-6">
-<div class="w-14 h-14 rounded-xl bg-blue-very-light flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-<span class="material-symbols-outlined text-primary" style="font-size:28px;font-variation-settings:'FILL' 0,'wght' 300">assignment_ind</span>
-</div>
-<span class="inline-block bg-amber-very-light text-on-secondary rounded-full px-3 py-1 text-xs font-semibold border border-amber-light/40">Öğretmen</span>
-</div>
-<h3 class="text-xl text-on-background mb-3">Öğretmenler</h3>
-<p class="text-sm text-muted-text leading-relaxed mb-5">Sınıfınızda zorbalığı fark etmek ve müdahale etmek için uzman pedagogların hazırladığı içeriklere ulaşın.</p>
-<ul class="space-y-2.5 mt-auto">
-<li class="flex items-start gap-2.5 text-sm text-muted-text"><span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5" style="font-size:16px">check_circle</span>Sınıf içi müdahale teknikleri</li>
-<li class="flex items-start gap-2.5 text-sm text-muted-text"><span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5" style="font-size:16px">check_circle</span>Pedagog destekli rehber materyaller</li>
-<li class="flex items-start gap-2.5 text-sm text-muted-text"><span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5" style="font-size:16px">check_circle</span>Veli ile işbirliği nasıl kurulur</li>
-</ul>
-                        </div>
                     </div>
                 </div>
-            </section>
-            
-            <section class="py-section-padding bg-surface">
-<div class="max-w-[1200px] mx-auto px-5 md:px-16 text-center transition-all duration-1000 opacity-100 translate-y-0">
-<div class="bg-background rounded-xl p-12 card-shadow">
-<div class="w-20 h-20 bg-blue-very-light text-primary rounded-full flex items-center justify-center mx-auto mb-6">
-<span class="material-symbols-outlined text-4xl">groups</span>
-</div>
-<h2 class="text-3xl text-on-background mb-4">Uzmanlarımız</h2>
-<p class="text-lg text-muted-text mb-8 max-w-2xl mx-auto">
-                    Platformumuzda içerik üretecek uzman pedagogları davet ediyoruz. Doğrulanmış her uzman burada yer alacak.
+            </div>
+            <!-- Minimalist Decorative Elements -->
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-primary/5 to-transparent -z-10 transition-all duration-1000 opacity-100 translate-y-0">
+            </div>
+            <div
+                class="absolute top-1/4 left-10 md:left-24 w-px h-32 bg-primary/20 -z-10 transition-all duration-1000 opacity-100 translate-y-0">
+            </div>
+            <div
+                class="absolute bottom-1/4 right-10 md:right-24 w-px h-32 bg-primary/20 -z-10 transition-all duration-1000 opacity-100 translate-y-0">
+            </div>
+            <div
+                class="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 blur-[120px] rounded-full -z-10 transition-all duration-1000 opacity-100 translate-y-0">
+            </div>
+            <div
+                class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/5 blur-[120px] rounded-full -z-10 transition-all duration-1000 opacity-100 translate-y-0">
+            </div>
+        </section>
+
+        <!-- Who it's for -->
+        <section class="py-section-padding bg-background" id="audience">
+            <div class="max-w-[1200px] mx-auto px-5 md:px-16">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                    <div class="max-w-xl">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="h-px w-12 bg-primary/30"></div>
+                            <span
+                                class="text-primary font-semibold text-xs uppercase tracking-widest whitespace-nowrap">Hedef
+                                Kitle</span>
+                            <div class="h-px w-12 bg-primary/30"></div>
+                        </div>
+                        <h2 class="text-3xl text-on-background mb-3">Kimler İçin?</h2>
+                        <p class="text-base text-muted-text">Zorbalık üç tarafı da ilgilendiriyor: yaşayanı, tanık olanı
+                            ve fark etmesi gerekeni.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Öğrenciler -->
+                    <div
+                        class="group bg-blue-very-light rounded-2xl p-8 card-shadow border border-blue-very-light hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                        <div class="flex items-start justify-between mb-6">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-colors">
+                                <span class="material-symbols-outlined text-primary"
+                                    style="font-size:28px;font-variation-settings:'FILL' 0,'wght' 300">face</span>
+                            </div>
+                            <span
+                                class="inline-block bg-amber-very-light text-on-secondary rounded-full px-3 py-1 text-xs font-semibold border border-amber-light/40">Öğrenci</span>
+                        </div>
+                        <h3 class="text-xl text-on-background mb-3">Öğrenciler</h3>
+                        <p class="text-sm text-muted-text leading-relaxed mt-auto">Zorbalığa uğradığında veya tanık
+                            olduğunda ne yapabileceğini uzmanlardan öğren.</p>
+                    </div>
+                    <!-- Veliler -->
+                    <div
+                        class="group bg-amber-very-light rounded-2xl p-8 card-shadow border border-amber-very-light hover:border-secondary/40 transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="w-14 h-14 rounded-xl flex items-center justify-center group-hover:opacity-90 transition-opacity"
+                                style="background:rgba(240,180,85,.2)">
+                                <span class="material-symbols-outlined text-on-secondary"
+                                    style="font-size:28px;font-variation-settings:'FILL' 0,'wght' 300;color:#7A5C1E">family_restroom</span>
+                            </div>
+                            <span
+                                class="inline-block bg-blue-very-light text-primary rounded-full px-3 py-1 text-xs font-semibold border border-primary/20">Veli</span>
+                        </div>
+                        <h3 class="text-xl text-on-background mb-3">Veliler</h3>
+                        <p class="text-sm text-muted-text leading-relaxed mt-auto">Erken işaretleri fark etmek ve
+                            çocuğunuzla doğru şekilde konuşmak için.</p>
+                    </div>
+                    <!-- Öğretmenler -->
+                    <div
+                        class="group bg-surface rounded-2xl p-8 card-shadow border border-outline/30 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                        <div class="flex items-start justify-between mb-6">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-blue-very-light flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                <span class="material-symbols-outlined text-primary"
+                                    style="font-size:28px;font-variation-settings:'FILL' 0,'wght' 300">assignment_ind</span>
+                            </div>
+                            <span
+                                class="inline-block bg-amber-very-light text-on-secondary rounded-full px-3 py-1 text-xs font-semibold border border-amber-light/40">Öğretmen</span>
+                        </div>
+                        <h3 class="text-xl text-on-background mb-3">Öğretmenler</h3>
+                        <p class="text-sm text-muted-text leading-relaxed mt-auto">Sınıfta zorbalığı görmek ve müdahale
+                            etmek için uzman içerikleri.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-section-padding bg-surface">
+            <div
+                class="max-w-[1200px] mx-auto px-5 md:px-16 text-center transition-all duration-1000 opacity-100 translate-y-0">
+                <div class="bg-background rounded-xl p-12 card-shadow">
+                    <div
+                        class="w-20 h-20 bg-blue-very-light text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="material-symbols-outlined text-4xl">groups</span>
+                    </div>
+                    <h2 class="text-3xl text-on-background mb-4">Uzmanlarımız</h2>
+                    <p class="text-lg text-muted-text mb-8 max-w-2xl mx-auto">
+                        Platformumuzda içerik üretecek uzmanları davet ediyoruz. Akranca; bilgi kirliliğinden uzak,
+                        yalnızca bilimsel ve mesleki tecrübeye dayanan özenle oluşturulmuş bir dayanışma alanıdır. Siz
+                        de mesleki tecrübenizle bu bilinçlendirme hareketine katkı sunmak isterseniz, tanışmayı çok
+                        isteriz.
+                    </p>
+                    <a class="bg-primary text-on-primary px-10 py-4 rounded-lg font-bold hover:bg-blue-dark transition-all inline-block"
+                        href="basvuru.html">
+                        Uzman olarak katıl
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Join / CTA Section -->
+        <section class="py-section-padding bg-primary relative overflow-hidden" id="join">
+            <div class="absolute inset-0 opacity-10 transition-all duration-1000 opacity-100 translate-y-0">
+                <div class="absolute top-0 left-0 w-full h-full"
+                    style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;">
+                </div>
+            </div>
+            <div
+                class="max-w-[1200px] mx-auto px-5 md:px-16 relative z-10 text-center text-white transition-all duration-1000 opacity-100 translate-y-0">
+                <h2 class="text-4xl md:text-5xl mb-6">Değişimin Bir Parçası Olun</h2>
+                <p class="text-lg text-blue-very-light mb-12 max-w-2xl mx-auto">Akranca'yı birlikte kuruyoruz. Gönüllü
+                    olarak, uzman olarak veya takipçi olarak katılabilirsiniz.</p>
+                <div class="flex flex-col md:flex-row gap-6 justify-center">
+                    <a class="bg-secondary text-on-secondary px-10 py-5 rounded-lg font-bold text-lg hover:shadow-2xl transition-all hover:-translate-y-1 inline-block"
+                        href="basvuru.html">
+                        Gönüllü ol
+                    </a>
+                    <a class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-lg font-bold text-lg hover:bg-white/20 transition-all hover:-translate-y-1 inline-block"
+                        href="basvuru.html">
+                        Uzman olarak katıl
+                    </a>
+                    <a class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-lg font-bold text-lg hover:bg-white/20 transition-all hover:-translate-y-1 inline-block"
+                        href="katil.html">
+                        Takip et
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-inverse-surface py-section-padding text-inverse-on-surface transition-colors">
+        <div
+            class="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-16 px-5 md:px-16 max-w-[1200px] mx-auto">
+            <div class="w-full lg:w-1/3">
+                <img src="assets/images/logo-white.svg" alt="Akranca"
+                    class="h-10 md:h-12 w-auto max-w-[200px] object-contain object-left mb-6">
+                <p class="font-body-md text-body-md text-white/80 mb-4 max-w-md">
+                    Okulda ve hayatta akran zorbalığına karşı toplumsal dayanışma alanınız
                 </p>
-<a class="bg-primary text-on-primary px-10 py-4 rounded-lg font-bold hover:bg-blue-dark transition-all inline-block" href="katil.html">
-                    Uzman olarak katıl
-                </a>
-</div>
-</div>
-</section>
-<!-- Join / CTA Section -->
-<section class="py-section-padding bg-primary relative overflow-hidden" id="join">
-<div class="absolute inset-0 opacity-10 transition-all duration-1000 opacity-100 translate-y-0">
-<div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
-</div>
-<div class="max-w-[1200px] mx-auto px-5 md:px-16 relative z-10 text-center text-white transition-all duration-1000 opacity-100 translate-y-0">
-<h2 class="text-4xl md:text-5xl mb-6">Değişimin Bir Parçası Olun</h2>
-<p class="text-lg text-blue-very-light mb-12 max-w-2xl mx-auto">Akranca'yı birlikte kuruyoruz. Gönüllü olarak, uzman olarak veya takipçi olarak katılabilirsiniz.</p>
-<div class="flex flex-col md:flex-row gap-6 justify-center">
-<a class="bg-secondary text-on-secondary px-10 py-5 rounded-lg font-bold text-lg hover:shadow-2xl transition-all hover:-translate-y-1 inline-block" href="katil.html">
-                    Gönüllü ol
-                </a>
-<a class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-lg font-bold text-lg hover:bg-white/20 transition-all hover:-translate-y-1 inline-block" href="katil.html">
-                    Pedagog olarak katıl
-                </a>
-<a class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-lg font-bold text-lg hover:bg-white/20 transition-all hover:-translate-y-1 inline-block" href="katil.html">
-                    Takip et
-                </a>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-inverse-surface py-section-padding text-inverse-on-surface transition-colors">
-<div class="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-16 px-5 md:px-16 max-w-[1200px] mx-auto">
-<div class="w-full lg:w-1/3">
-<img src="assets/images/logo-white.svg" alt="Akranca" class="h-10 md:h-12 w-auto max-w-[200px] object-contain object-left mb-6">
-<p class="font-body-md text-body-md text-white/80 mb-4 max-w-sm">
-Okulda ve hayatta akran zorbalığına karşı profesyonel ve toplumsal çözüm ortağınız.
-</p>
-</div>
-<div class="w-full lg:w-2/3 grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-12">
-<div class="space-y-5">
-<h5 class="font-label-md text-label-md text-white font-semibold">Kurumsal</h5>
-<ul class="space-y-3">
-<li><a class="font-body-md text-body-md text-white/70 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200" href="hakkimizda.html">Hakkımızda</a></li>
-<li><a class="font-body-md text-body-md text-white/70 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200" href="#">Hizmetler</a></li>
-<li><a class="font-body-md text-body-md text-white/70 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200" href="#">Topluluk</a></li>
-</ul>
-</div>
-<div class="space-y-5">
-<h5 class="font-label-md text-label-md text-white font-semibold">Yasal</h5>
-<ul class="space-y-3">
-<li><a class="font-body-md text-body-md text-white/70 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200" href="gizlilik-politikasi.html">Gizlilik Politikası</a></li>
-<li><a class="font-body-md text-body-md text-white/70 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200" href="kullanim-kosullari.html">Kullanım Koşulları</a></li>
-</ul>
-</div>
-<div class="space-y-5">
-<h5 class="font-label-md text-label-md text-white font-semibold">İletişim</h5>
-<ul class="space-y-3">
-<li><a class="font-body-md text-body-md text-white/70 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200" href="iletisim.html">Bize Ulaşın</a></li>
-<li class="flex gap-4 mt-6 items-center">
-<a aria-label="Instagram" class="text-white/60 hover:text-white transition-all hover:-translate-y-1 duration-200" href="#"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path></svg></a>
-<a aria-label="X (Twitter)" class="text-white/60 hover:text-white transition-all hover:-translate-y-1 duration-200" href="#"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg></a>
-<a aria-label="YouTube" class="text-white/60 hover:text-white transition-all hover:-translate-y-1 duration-200" href="#"><svg class="w-[22px] h-[22px]" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.582 5.82a2.67 2.67 0 00-1.876-1.887C17.973 3.5 12 3.5 12 3.5s-5.973 0-7.706.433A2.67 2.67 0 002.418 5.82C2 7.55 2 11.164 2 11.164s0 3.614.418 5.344a2.67 2.67 0 001.876 1.887C6.027 18.828 12 18.828 12 18.828s5.973 0 7.706-.433a2.67 2.67 0 001.876-1.887c.418-1.73.418-5.344.418-5.344s0-3.614-.418-5.344zM9.957 13.916V8.411l5.449 2.753-5.449 2.752z" clip-rule="evenodd"></path></svg></a>
-<a aria-label="LinkedIn" class="text-white/60 hover:text-white transition-all hover:-translate-y-1 duration-200" href="#"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"></path></svg></a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="max-w-[1200px] mx-auto px-5 md:px-16 mt-20 pt-8 border-t border-white/10 text-center md:text-left">
-<p class="font-label-sm text-label-sm text-white/60">© 2026 Akranca. Tüm hakları saklıdır.</p>
-</div>
-</footer>
-<script>
-    // Mobile Menu Toggle Logic
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
+            </div>
+            <div class="w-full lg:w-2/3 grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-12">
+                <div class="space-y-5">
+                    <h5 class="font-label-md text-label-md text-white font-semibold">Kurumsal</h5>
+                    <ul class="space-y-3">
+                        <li><a class="font-body-md text-body-md text-white/70 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200"
+                                href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a class="font-body-md text-body-md text-white/70 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200"
+                                href="katil.html">Topluluk</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-5">
+                    <h5 class="font-label-md text-label-md text-white font-semibold">Yasal</h5>
+                    <ul class="space-y-3">
+                        <li><a class="font-body-md text-body-md text-white/70 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200"
+                                href="gizlilik-politikasi.html">Gizlilik Politikası</a></li>
+                        <li><a class="font-body-md text-body-md text-white/70 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200"
+                                href="kullanim-kosullari.html">Kullanım Koşulları</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-5">
+                    <h5 class="font-label-md text-label-md text-white font-semibold">İletişim</h5>
+                    <ul class="space-y-3">
+                        <li><a class="font-body-md text-body-md text-white/70 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200"
+                                href="iletisim.html">Bize Ulaşın</a></li>
+                        <li class="flex gap-4 mt-6 items-center">
+                            <a aria-label="Instagram"
+                                class="text-white/60 hover:text-white transition-all hover:-translate-y-1 duration-200"
+                                href="https://www.instagram.com/akrancaorg/" target="_blank"
+                                rel="noopener noreferrer"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd"
+                                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                        clip-rule="evenodd"></path>
+                                </svg></a>
+                            <a aria-label="X (Twitter)"
+                                class="text-white/60 hover:text-white transition-all hover:-translate-y-1 duration-200"
+                                href="https://x.com/akrancaorg" target="_blank" rel="noopener noreferrer"><svg
+                                    class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z">
+                                    </path>
+                                </svg></a>
+                            <a aria-label="YouTube"
+                                class="text-white/60 hover:text-white transition-all hover:-translate-y-1 duration-200"
+                                href="https://www.youtube.com/@Akrancaorg" target="_blank"
+                                rel="noopener noreferrer"><svg class="w-[22px] h-[22px]" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd"
+                                        d="M21.582 5.82a2.67 2.67 0 00-1.876-1.887C17.973 3.5 12 3.5 12 3.5s-5.973 0-7.706.433A2.67 2.67 0 002.418 5.82C2 7.55 2 11.164 2 11.164s0 3.614.418 5.344a2.67 2.67 0 001.876 1.887C6.027 18.828 12 18.828 12 18.828s5.973 0 7.706-.433a2.67 2.67 0 001.876-1.887c.418-1.73.418-5.344.418-5.344s0-3.614-.418-5.344zM9.957 13.916V8.411l5.449 2.753-5.449 2.752z"
+                                        clip-rule="evenodd"></path>
+                                </svg></a>
+                            <a aria-label="LinkedIn"
+                                class="text-white/60 hover:text-white transition-all hover:-translate-y-1 duration-200"
+                                href="https://www.linkedin.com/company/akranca/?viewAsMember=true" target="_blank"
+                                rel="noopener noreferrer"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd"
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                                        clip-rule="evenodd"></path>
+                                </svg></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-[1200px] mx-auto px-5 md:px-16 mt-20 pt-8 border-t border-white/10 text-center md:text-left">
+            <p class="font-label-sm text-label-sm text-white/60">© 2026 Akranca. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+    <script>
+        // Mobile Menu Toggle Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-    menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-        const icon = menuToggle.querySelector('.material-symbols-outlined');
-        icon.textContent = mobileMenu.classList.contains('active') ? 'close' : 'menu';
-    });
-
-    // Simple Fade-in Observer
-    const observerOptions = { threshold: 0.1 };
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('opacity-100', 'translate-y-0');
-                entry.target.classList.remove('opacity-0', 'translate-y-10');
-            }
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('.material-symbols-outlined');
+            icon.textContent = mobileMenu.classList.contains('active') ? 'close' : 'menu';
         });
-    }, observerOptions);
 
-    document.querySelectorAll('section > div').forEach(section => {
-        section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
-        observer.observe(section);
-    });
-</script>
+        // Simple Fade-in Observer
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
 
 
-</body></html>
+</body>
+
+</html>
