@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Akranca'ya Katıl | Uzman ve Gönüllü Başvuru Formu</title>
+    <meta name="description"
+        content="Akranca'ya uzman veya gönüllü olarak katılın. Akran zorbalığına karşı dayanışmamıza güç katın.">
+    <link href="assets/images/icon.svg" rel="icon" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3D6B99",
+                        secondary: "#F0B455",
+                        "on-surface": "#2C3540",
+                        background: "#F4F6F8",
+                        surface: "#FFFFFF",
+                        "blue-dark": "#2C4F73",
+                        "blue-light": "#7A9CC0",
+                        "blue-very-light": "#DCE7F2",
+                        "amber-light": "#F5CB8A",
+                        "amber-very-light": "#FDF0DC",
+                        "muted-text": "#5C6672",
+                        outline: "#D5DAE0",
+                        "on-background": "#2C3540",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#2C3540",
+                        "inverse-surface": "#2C3540",
+                        "surface-bright": "#FFFFFF",
+                        "surface-variant": "#939CA6",
+                        "inverse-on-surface": "#F4F6F8",
+                        "primary-fixed": "#DCE7F2"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "8px",
+                        xl: "12px",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "container-max": "1200px",
+                        "margin-mobile": "20px",
+                        "stack-sm": "8px",
+                        gutter: "24px",
+                        "margin-desktop": "64px",
+                        "section-padding": "80px"
+                    },
+                    fontFamily: {
+                        body: ["Inter", "sans-serif"],
+                        headline: ["Space Grotesk", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            animation: pageFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 24px rgba(61, 107, 153, 0.08);
+        }
+
+        @keyframes pageFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface min-h-screen flex flex-col justify-between">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline/20">
+        <div class="flex justify-between items-center w-full px-5 md:px-16 max-w-[1200px] mx-auto h-20">
+            <div class="flex items-center gap-2">
+                <a class="flex items-center" href="index.html">
+                    <img src="assets/images/logo.svg" alt="Akranca" class="h-12 w-auto">
+                </a>
+            </div>
+            <nav class="hidden md:flex gap-8 items-center">
+                <a class="text-muted-text hover:text-primary transition-colors font-medium text-sm py-1"
+                    href="index.html">Ana Sayfa</a>
+                <a class="text-muted-text hover:text-primary transition-colors font-medium text-sm"
+                    href="hakkimizda.html">Hakkımızda</a>
+                <a class="text-muted-text hover:text-primary transition-colors font-medium text-sm"
+                    href="pedagoglar.html">Uzmanlarımız</a>
+                <a class="text-muted-text hover:text-primary transition-colors font-medium text-sm"
+                    href="uygulama.html">Uygulama</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a class="hidden md:block bg-primary text-on-primary px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-dark transition-all active:scale-95"
+                    href="katil.html">Topluluğa Katıl</a>
+                <button class="md:hidden p-2 text-on-surface" id="menu-toggle" aria-label="Menüyü Aç">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+        <div class="md:hidden absolute top-20 left-0 w-full bg-surface border-b border-outline/20 flex-col p-5 gap-4 shadow-xl hidden"
+            id="mobile-menu">
+            <a class="text-muted-text font-medium text-base py-2" href="index.html">Ana Sayfa</a>
+            <a class="text-muted-text font-medium text-base py-2" href="hakkimizda.html">Hakkımızda</a>
+            <a class="text-muted-text font-medium text-base py-2" href="pedagoglar.html">Uzmanlarımız</a>
+            <a class="text-muted-text font-medium text-base py-2" href="uygulama.html">Uygulama</a>
+            <a class="bg-primary text-on-primary px-6 py-3 rounded-lg font-semibold text-center mt-2"
+                href="katil.html">Topluluğa Katıl</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center py-12 md:py-16 px-5 relative overflow-hidden">
+        <!-- Subtle Background Glows -->
+        <div class="absolute inset-0 pointer-events-none"
+            style="background:radial-gradient(ellipse 700px 400px at 50% 20%,rgba(61,107,153,.07) 0%,transparent 70%),radial-gradient(ellipse 500px 350px at 80% 80%,rgba(240,180,85,.05) 0%,transparent 70%)">
+        </div>
+
+        <div class="w-full max-w-[500px] mx-auto relative z-10">
+            <!-- Form Card -->
+            <div class="bg-surface rounded-2xl p-6 sm:p-10 card-shadow border border-outline/30">
+                <!-- Header / Title -->
+                <div class="text-center mb-8">
+                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-very-light text-primary mb-4">
+                        <span class="material-symbols-outlined text-2xl">how_to_reg</span>
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl text-on-background font-medium mb-2">Akranca'ya Katıl</h1>
+                    <p class="text-muted-text text-sm sm:text-base leading-relaxed">
+                        Uzman veya gönüllü olarak dayanışmamıza güç katın.
+                    </p>
+                </div>
+
+                <!-- Application Form -->
+                <form id="application-form" class="space-y-5">
+                    <!-- 1. Başvuru Türü -->
+                    <div>
+                        <label for="application-type" class="block text-sm font-medium text-on-surface mb-2">
+                            Başvuru Türü <span class="text-red-500">*</span>
+                        </label>
+                        <div class="relative">
+                            <select id="application-type" name="applicationType" required
+                                class="w-full px-4 py-3 rounded-lg border border-outline bg-surface text-on-surface text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none cursor-pointer pr-10">
+                                <option value="" disabled selected>Lütfen seçiniz...</option>
+                                <option value="uzman">Uzman Olarak Katılmak İstiyorum</option>
+                                <option value="gonullu">Gönüllü Olarak Katılmak İstiyorum</option>
+                            </select>
+                            <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-muted-text pointer-events-none text-xl">
+                                expand_more
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- 2. Adınız Soyadınız -->
+                    <div>
+                        <label for="full-name" class="block text-sm font-medium text-on-surface mb-2">
+                            Adınız Soyadınız <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="full-name" name="fullName" required placeholder="Adınız ve soyadınız"
+                            class="w-full px-4 py-3 rounded-lg border border-outline bg-surface text-on-surface text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all placeholder:text-muted-text/60">
+                    </div>
+
+                    <!-- 3. E-posta Adresiniz -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-on-surface mb-2">
+                            E-posta Adresiniz <span class="text-red-500">*</span>
+                        </label>
+                        <input type="email" id="email" name="email" required placeholder="ornek@eposta.com"
+                            class="w-full px-4 py-3 rounded-lg border border-outline bg-surface text-on-surface text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all placeholder:text-muted-text/60">
+                    </div>
+
+                    <!-- 4. LinkedIn Profil Linkiniz -->
+                    <div>
+                        <label for="linkedin" class="block text-sm font-medium text-on-surface mb-2">
+                            LinkedIn Profil Linkiniz
+                        </label>
+                        <div class="relative">
+                            <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/profiliniz"
+                                class="w-full px-4 py-3 pl-10 rounded-lg border border-outline bg-surface text-on-surface text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all placeholder:text-muted-text/60">
+                            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-muted-text text-lg">
+                                link
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- 5. Submit Button -->
+                    <div class="pt-2">
+                        <button type="submit" id="submit-btn"
+                            class="w-full bg-primary text-white py-3.5 px-6 rounded-lg font-semibold text-sm sm:text-base hover:bg-blue-dark transition-all active:scale-[0.99] flex items-center justify-center gap-2 shadow-sm hover:shadow">
+                            <span>Başvuruyu Gönder</span>
+                            <span class="material-symbols-outlined text-lg">send</span>
+                        </button>
+                    </div>
+
+                    <!-- Message Container -->
+                    <div id="form-message" class="hidden transition-all duration-300"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-inverse-surface py-section-padding text-inverse-on-surface transition-colors mt-auto">
+        <div
+            class="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-16 px-5 md:px-16 max-w-[1200px] mx-auto">
+            <div class="w-full lg:w-1/3">
+                <img src="assets/images/logo-white.svg" alt="Akranca"
+                    class="h-10 md:h-12 w-auto max-w-[200px] object-contain object-left mb-6">
+                <p class="font-body-md text-body-md text-white/80 mb-4 max-w-sm">
+                    Okulda ve hayatta akran zorbalığına karşı profesyonel ve toplumsal çözüm ortağınız.
+                </p>
+            </div>
+            <div class="w-full lg:w-2/3 grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-12">
+                <div class="space-y-5">
+                    <h5 class="font-label-md text-label-md text-white font-semibold">Kurumsal</h5>
+                    <ul class="space-y-3">
+                        <li><a class="font-body-md text-body-md text-white/70 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200"
+                                href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a class="font-body-md text-body-md text-white/70 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200"
+                                href="katil.html">Topluluk</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-5">
+                    <h5 class="font-label-md text-label-md text-white font-semibold">Yasal</h5>
+                    <ul class="space-y-3">
+                        <li><a class="font-body-md text-body-md text-white/70 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200"
+                                href="gizlilik-politikasi.html">Gizlilik Politikası</a></li>
+                        <li><a class="font-body-md text-body-md text-white/70 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200"
+                                href="kullanim-kosullari.html">Kullanım Koşulları</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-5">
+                    <h5 class="font-label-md text-label-md text-white font-semibold">İletişim</h5>
+                    <ul class="space-y-3">
+                        <li><a class="font-body-md text-body-md text-white/70 hover:text-white transition-colors inline-block hover:-translate-y-0.5 duration-200"
+                                href="iletisim.html">Bize Ulaşın</a></li>
+                        <li class="flex gap-4 mt-6 items-center">
+                            <a aria-label="Instagram"
+                                class="text-white/60 hover:text-white transition-all hover:-translate-y-1 duration-200"
+                                href="https://www.instagram.com/akrancaorg/" target="_blank"
+                                rel="noopener noreferrer"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd"
+                                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                        clip-rule="evenodd"></path>
+                                </svg></a>
+                            <a aria-label="X (Twitter)"
+                                class="text-white/60 hover:text-white transition-all hover:-translate-y-1 duration-200"
+                                href="https://x.com/akrancaorg" target="_blank" rel="noopener noreferrer"><svg
+                                    class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z">
+                                    </path>
+                                </svg></a>
+                            <a aria-label="YouTube"
+                                class="text-white/60 hover:text-white transition-all hover:-translate-y-1 duration-200"
+                                href="https://www.youtube.com/@Akrancaorg" target="_blank"
+                                rel="noopener noreferrer"><svg class="w-[22px] h-[22px]" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd"
+                                        d="M21.582 5.82a2.67 2.67 0 00-1.876-1.887C17.973 3.5 12 3.5 12 3.5s-5.973 0-7.706.433A2.67 2.67 0 002.418 5.82C2 7.55 2 11.164 2 11.164s0 3.614.418 5.344a2.67 2.67 0 001.876 1.887C6.027 18.828 12 18.828 12 18.828s5.973 0 7.706-.433a2.67 2.67 0 001.876-1.887c.418-1.73.418-5.344.418-5.344s0-3.614-.418-5.344zM9.957 13.916V8.411l5.449 2.753-5.449 2.752z"
+                                        clip-rule="evenodd"></path>
+                                </svg></a>
+                            <a aria-label="LinkedIn"
+                                class="text-white/60 hover:text-white transition-all hover:-translate-y-1 duration-200"
+                                href="https://www.linkedin.com/company/akranca/?viewAsMember=true" target="_blank"
+                                rel="noopener noreferrer"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd"
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                                        clip-rule="evenodd"></path>
+                                </svg></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-[1200px] mx-auto px-5 md:px-16 mt-20 pt-8 border-t border-white/10 text-center md:text-left">
+            <p class="font-label-sm text-label-sm text-white/60">© 2026 Akranca. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Google Apps Script Web App URL
+        const googleAppUrl = 'https://script.google.com/macros/s/AKfycbwGX29Z4yHzmbuc1PW8Wlf3tHsud8-xPzTdG77UAnNvNlC4TTTo_8MI5Z-ljzv60d9LFg/exec';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mt = document.getElementById('menu-toggle');
+            const mm = document.getElementById('mobile-menu');
+            if (mt && mm) {
+                mt.addEventListener('click', () => {
+                    mm.classList.toggle('hidden');
+                    mm.classList.toggle('flex');
+                    mt.querySelector('.material-symbols-outlined').textContent = mm.classList.contains('hidden') ? 'menu' : 'close';
+                });
+            }
+
+            // Form Submit Handling (Google Apps Script Fetch API)
+            const form = document.getElementById('application-form');
+            const msgDiv = document.getElementById('form-message');
+            const submitBtn = document.getElementById('submit-btn');
+
+            if (form && msgDiv && submitBtn) {
+                const originalBtnContent = submitBtn.innerHTML;
+
+                form.addEventListener('submit', async (e) => {
+                    // Sayfa yenilenmesini engelle
+                    e.preventDefault();
+
+                    // Form verilerini al
+                    const applicationType = document.getElementById('application-type').value;
+                    const fullName = document.getElementById('full-name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const linkedin = document.getElementById('linkedin').value.trim();
+
+                    // Zorunlu alan kontrolü
+                    if (!applicationType || !fullName || !email) {
+                        msgDiv.className = 'p-4 rounded-xl text-sm font-medium bg-red-50 text-red-700 border border-red-200 flex items-center gap-2 mt-4';
+                        msgDiv.innerHTML = '<span class="material-symbols-outlined text-lg">error</span> Lütfen tüm zorunlu alanları doldurunuz.';
+                        msgDiv.classList.remove('hidden');
+                        return;
+                    }
+
+                    // Gönderim sırasında butonu devre dışı bırak ve metni güncelle
+                    submitBtn.disabled = true;
+                    submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+                    submitBtn.innerHTML = '<span>Gönderiliyor...</span>';
+                    msgDiv.classList.add('hidden');
+
+                    // Google Apps Script doPost için URLSearchParams formatında veri paketi
+                    const payload = new URLSearchParams();
+                    payload.append('applicationType', applicationType);
+                    payload.append('fullName', fullName);
+                    payload.append('email', email);
+                    payload.append('linkedin', linkedin);
+
+                    try {
+                        // Eğer URL henüz tanımlanmamışsa kullanıcıyı uyar
+                        if (!googleAppUrl || googleAppUrl === 'BURAYA_APPS_SCRIPT_LINKI_GELECEK') {
+                            throw new Error('Google Apps Script URL henüz tanımlanmadı.');
+                        }
+
+                        const response = await fetch(googleAppUrl, {
+                            method: 'POST',
+                            body: payload
+                        });
+
+                        const data = await response.json();
+
+                        // Başarılı yanıt kontrolü ({ "status": "success" })
+                        if (data && (data.status === 'success' || data.result === 'success')) {
+                            msgDiv.className = 'p-4 rounded-xl text-sm font-medium bg-[#E8F5E9] text-[#2E7D32] border border-[#C8E6C9] flex items-start gap-2.5 mt-4';
+                            msgDiv.innerHTML = '<span class="material-symbols-outlined text-xl text-[#2E7D32] shrink-0">check_circle</span> <div><strong class="font-semibold block mb-0.5">Başvurunuz başarıyla alındı!</strong> Dayanışmamıza güç kattığınız için teşekkür ederiz. Ekibimiz en kısa sürede sizinle iletişime geçecektir.</div>';
+                            msgDiv.classList.remove('hidden');
+                            form.reset();
+                        } else {
+                            throw new Error(data.message || 'Sunucu başarısız yanıt döndü.');
+                        }
+                    } catch (error) {
+                        console.error('Başvuru gönderim hatası:', error);
+                        msgDiv.className = 'p-4 rounded-xl text-sm font-medium bg-red-50 text-red-700 border border-red-200 flex items-center gap-2 mt-4';
+                        msgDiv.innerHTML = '<span class="material-symbols-outlined text-lg shrink-0">error</span> <span>Bir bağlantı hatası oluştu, lütfen tekrar deneyin.</span>';
+                        msgDiv.classList.remove('hidden');
+                    } finally {
+                        // İşlem bitince butonu eski haline getir
+                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                        submitBtn.innerHTML = originalBtnContent;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
