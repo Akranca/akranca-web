@@ -8,7 +8,7 @@ Akranca — akran zorbalığı hakkında farkındalık yaratan platform için ta
 |---|---|
 | `index.html` | Ana Sayfa |
 | `hakkimizda.html` | Hakkımızda |
-| `pedagoglar.html` | Pedagoglar |
+| `pedagoglar.html` | Uzmanlarımız |
 | `uygulama.html` | Uygulama Detayları |
 | `katilim-formu.html` | Katılım Formu |
 | `gizlilik-politikasi.html` | Gizlilik Politikası |
