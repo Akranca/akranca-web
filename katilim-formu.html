@@ -185,7 +185,7 @@
 <h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Gönüllü olarak</h3>
 <p class="text-on-surface-variant">Saha çalışmalarımızda ve farkındalık kampanyalarımızda aktif rol alarak değişimin parçası olun.</p>
 </div>
-<!-- Pedagog -->
+<!-- Uzman -->
 <div class="tonal-card p-stack-lg rounded-xl flex flex-col items-center text-center">
 <div class="w-full h-48 mb-stack-lg rounded-lg overflow-hidden navy-duotone">
 <img class="w-full h-full object-cover" data-alt="An atmospheric, close-up shot of a professional pedagogical setting. A warm, softly lit room where a counselor's hands are resting on a wooden table next to a notebook. The focus is on the environment of safety and institutional trust. The image uses a deep navy blue duotone filter to maintain consistency with the brand's authoritative yet empathetic tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs9WTNTJt9FpjBZMQ6BxVmsJ3swgw0d8JMMfw_K1r98_1RbQqLtD3PzgqUjspqw-Pa_rkidfTvva0JoG3U2bi1uV7nEVnco5PMqj2_5j7EcfRZQ4DWz175ba42PJ85Z2AXDSKxf-sKu2qQVoEXYCLGOi5hzrNQZyyIJWHLGwpDLX7dmuyeLGQ8ISB32ENDswQgBjmExIKj1tRmRGWh6WHpP76zJ5cRynQ9QLjbaTvLKlFZjGbvZjBF">
@@ -193,7 +193,7 @@
 <div class="p-2 bg-secondary-container/20 rounded-full mb-stack-md">
 <span class="material-symbols-outlined text-primary" data-icon="psychology">psychology</span>
 </div>
-<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Pedagog olarak</h3>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Uzman olarak</h3>
 <p class="text-on-surface-variant">Uzmanlığınızla topluluğumuza rehberlik edin ve bilimsel temelli çözüm süreçlerine katkıda bulunun.</p>
 </div>
 <!-- Follower -->
@@ -222,7 +222,7 @@
 <label class="block font-label-md text-on-surface mb-2">Başvuru Rolü</label>
 <select class="w-full p-2.5 rounded-lg border border-outline-variant bg-surface text-on-surface font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all">
 <option value="gonullu">Gönüllü</option>
-<option value="pedagog">Pedagog</option>
+<option value="uzman">Uzman</option>
 <option value="takipci">Takipçi</option>
 </select>
 </div>
@@ -240,7 +240,7 @@
 <label class="block font-label-md text-on-surface mb-2">Telefon (Opsiyonel)</label>
 <input class="w-full p-2.5 rounded-lg border border-outline-variant bg-surface text-on-surface font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="05xx xxx xx xx" type="tel">
 </div>
-<div class="hidden space-y-stack-md" id="pedagog-fields">
+<div class="hidden space-y-stack-md" id="uzman-fields">
 <div>
 <label class="block font-label-md text-on-surface mb-2">Uzmanlık Alanı</label>
 <input class="w-full p-2.5 rounded-lg border border-outline-variant bg-surface text-on-surface font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Örn: Çocuk ve Ergen Psikolojisi" type="text">
@@ -258,11 +258,11 @@
 </form>
 <script>
     document.querySelector('#form-alani select').addEventListener('change', function(e) {
-      const pedagogFields = document.getElementById('pedagog-fields');
-      if (e.target.value === 'pedagog') {
-        pedagogFields.classList.remove('hidden');
+      const uzmanFields = document.getElementById('uzman-fields');
+      if (e.target.value === 'uzman') {
+        uzmanFields.classList.remove('hidden');
       } else {
-        pedagogFields.classList.add('hidden');
+        uzmanFields.classList.add('hidden');
       }
     });
   </script>

@@ -336,13 +336,14 @@
                     e.preventDefault();
 
                     // Form verilerini al
-                    const applicationType = document.getElementById('application-type').value;
-                    const fullName = document.getElementById('full-name').value.trim();
+                    const appTypeSelect = document.getElementById('application-type');
+                    const role = appTypeSelect.options[appTypeSelect.selectedIndex]?.text || appTypeSelect.value;
+                    const name = document.getElementById('full-name').value.trim();
                     const email = document.getElementById('email').value.trim();
                     const linkedin = document.getElementById('linkedin').value.trim();
 
                     // Zorunlu alan kontrolü
-                    if (!applicationType || !fullName || !email) {
+                    if (!appTypeSelect.value || !name || !email) {
                         msgDiv.className = 'p-4 rounded-xl text-sm font-medium bg-red-50 text-red-700 border border-red-200 flex items-center gap-2 mt-4';
                         msgDiv.innerHTML = '<span class="material-symbols-outlined text-lg">error</span> Lütfen tüm zorunlu alanları doldurunuz.';
                         msgDiv.classList.remove('hidden');
@@ -355,12 +356,15 @@
                     submitBtn.innerHTML = '<span>Gönderiliyor...</span>';
                     msgDiv.classList.add('hidden');
 
-                    // Google Apps Script doPost için URLSearchParams formatında veri paketi
+                    // Google Apps Script doPost ile tam eşleşen URLSearchParams veri paketi
                     const payload = new URLSearchParams();
-                    payload.append('applicationType', applicationType);
-                    payload.append('fullName', fullName);
+                    payload.append('role', role);
+                    payload.append('name', name);
                     payload.append('email', email);
                     payload.append('linkedin', linkedin);
+                    // Geriye dönük uyumluluk için yedek anahtarlar
+                    payload.append('applicationType', role);
+                    payload.append('fullName', name);
 
                     try {
                         // Eğer URL henüz tanımlanmamışsa kullanıcıyı uyar

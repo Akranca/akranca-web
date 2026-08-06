@@ -51,3 +51,14 @@
 - Google Apps Script (`doPost`) entegrasyonu tamamlandı: Fetch API ve `URLSearchParams` kullanılarak CORS uyumlu form gönderimi, dinamik buton loading state (`Gönderiliyor...`) ve başarı/hata geri bildirim mesajları uygulandı.
 - Sayfa yönlendirmeleri güncellendi: `index.html`, `hakkimizda.html` ve `pedagoglar.html` sayfalarındaki "Gönüllü Ol" ve "Uzman Olarak Katıl" CTA butonları `katil.html` yerine `basvuru.html` sayfasına yönlendirildi.
 
+### 06.08.2026 - 01:35 (TR)
+**Branch:** `feature/fix-form-submission-fields`
+
+#### Form Entegrasyonu ve Parametre Eşleme
+- `basvuru.html` sayfasındaki JavaScript form gönderim mantığı güncellendi: Seçilen rol ("Gönüllü" / "Uzman") string olarak ve isim `name` parametresi olarak Google Apps Script `doPost` fonksiyonunun beklediği şemayla (`role`, `name`, `email`, `linkedin`) birebir eşlendi.
+
+#### Terminoloji ve Karakter Standardizasyonu
+- Site genelinde yer alan "Pedagog" terimleri "Uzman" olarak güncellendi (`katilim-formu.html`, `pedagoglar.html`, `hakkimizda.html`, `README.md`).
+- `iletisim.html` ve diğer sayfalardaki Türkçe karakter karmaşaları (I, i, ı, ü, ö, ş, ç) düzeltildi ve nav/footer bağlantıları standartlaştırıldı (`Uzmanlarımız`, `İletişim`, `Hakkımızda`, `Topluluğa Katıl`, vb.).
+
+
