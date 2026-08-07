@@ -2,11 +2,7 @@
 stitch_akranca_community_platform/
 
 # ── İç belgeler (ekip için, kamuya açık değil) ──────────────────────────────
-Docs/prd.md
-Docs/tech_spec.md
-Docs/start.md
-Docs/end.md
-Docs/marka.md
+Docs/
 
 
 # ── Ortam ve gizli bilgiler ──────────────────────────────────────────────────

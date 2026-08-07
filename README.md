@@ -18,16 +18,13 @@ Akranca — akran zorbalığı hakkında farkındalık yaratan platform için ta
 ```
 akranca-web/
 ├── *.html                  # Sayfa dosyaları
-├── assets/
-│   ├── css/                # Paylaşılan stiller (revize aşamasında doldurulacak)
-│   └── screenshots/        # Stitch'ten gelen referans ekran görüntüleri
-└── Docs/
-    └── design/             # Design system belgeleri
-        ├── design-system.md
-        └── community-system.md
+└── assets/
+    ├── images/             # Logolar ve görseller
+    ├── data/               # Veri dosyaları
+    └── screenshots/        # Ekran görüntüleri
 ```
 
 ## Notlar
 
-- Her HTML şu an bağımsız (inline stil). Revizyon aşamasında ortak `assets/css/style.css`'e taşınacak.
-- Ekip içi belgeler (prd, tech_spec, marka vb.) `.gitignore` kapsamındadır.
+- Her HTML sayfası bağımsız modern semantik yapı ve Tailwind CSS sınıfları kullanmaktadır.
+
