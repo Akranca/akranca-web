@@ -129,6 +129,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Space Grotesk',sans-serif;font-weight:500}
 <span class="material-symbols-outlined" style="font-size:18px">send</span>
 <svg id="btn-loading" class="hidden animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>
 </button>
+<div id="form-feedback" class="hidden text-sm text-center font-medium py-3 px-4 rounded-xl mt-4"></div>
 </form>
 </div>
 </div>
@@ -185,38 +186,140 @@ Okulda ve hayatta akran zorbalığına karşı profesyonel ve toplumsal çözüm
 </div>
 </footer>
 <script>
-document.addEventListener('DOMContentLoaded',()=>{
-const mt=document.getElementById('menu-toggle'),mm=document.getElementById('mobile-menu');
-if(mt&&mm){mt.addEventListener('click',()=>{mm.classList.toggle('hidden');mm.classList.toggle('flex');mt.querySelector('.material-symbols-outlined').textContent=mm.classList.contains('hidden')?'menu':'close';})}
-const msg=document.getElementById('contact-message'),counter=document.getElementById('char-count');
-msg.addEventListener('input',()=>{const l=Math.min(msg.value.length,1000);if(msg.value.length>1000)msg.value=msg.value.substring(0,1000);counter.textContent=l+' / 1000';});
-const main=document.querySelector('main');main.style.opacity='0';main.style.transform='translateY(16px)';main.style.transition='opacity .5s ease,transform .5s ease';setTimeout(()=>{main.style.opacity='1';main.style.transform='translateY(0)';},80);
+const googleAppUrl = 'https://script.google.com/macros/s/AKfycbypPza83s0RIzSEdX6_CGgBAEhXDl5Wo25FYUnsPGOO9adP1z5mVencRuhWmW8fSC-3Gw/exec';
+
+document.addEventListener('DOMContentLoaded', () => {
+    const mt = document.getElementById('menu-toggle'), mm = document.getElementById('mobile-menu');
+    if (mt && mm) {
+        mt.addEventListener('click', () => {
+            mm.classList.toggle('hidden');
+            mm.classList.toggle('flex');
+            mt.querySelector('.material-symbols-outlined').textContent = mm.classList.contains('hidden') ? 'menu' : 'close';
+        });
+    }
+    const msg = document.getElementById('contact-message'), counter = document.getElementById('char-count');
+    msg.addEventListener('input', () => {
+        const l = Math.min(msg.value.length, 1000);
+        if (msg.value.length > 1000) msg.value = msg.value.substring(0, 1000);
+        counter.textContent = l + ' / 1000';
+    });
+    const main = document.querySelector('main');
+    main.style.opacity = '0';
+    main.style.transform = 'translateY(16px)';
+    main.style.transition = 'opacity .5s ease,transform .5s ease';
+    setTimeout(() => {
+        main.style.opacity = '1';
+        main.style.transform = 'translateY(0)';
+    }, 80);
 });
-document.getElementById('contact-form').addEventListener('submit',e=>{
-e.preventDefault();let v=true;
-function chk(id,eid,cond){const el=document.getElementById(id),er=document.getElementById(eid);if(cond){er.classList.remove('hidden');el.classList.add('error');v=false;}else{er.classList.add('hidden');el.classList.remove('error');}}
-chk('contact-name','name-error',!document.getElementById('contact-name').value.trim());
-chk('contact-email','email-error',!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('contact-email').value));
-chk('contact-subject','subject-error',!document.getElementById('contact-subject').value);
-chk('contact-message','message-error',document.getElementById('contact-message').value.trim().length<10);
-const kv=document.getElementById('kvkk-consent'),ke=document.getElementById('kvkk-error');
-if(!kv.checked){ke.classList.remove('hidden');v=false;}else ke.classList.add('hidden');
-if(!v)return;
-const btn=document.getElementById('submit-btn');
-document.getElementById('btn-text').classList.add('hidden');
-document.querySelector('#submit-btn .material-symbols-outlined').classList.add('hidden');
-document.getElementById('btn-loading').classList.remove('hidden');
-btn.disabled=true;
-setTimeout(()=>{document.getElementById('contact-form').classList.add('hidden');document.getElementById('success-message').classList.remove('hidden');},1200);
+
+document.getElementById('contact-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    let v = true;
+
+    function chk(id, eid, cond) {
+        const el = document.getElementById(id), er = document.getElementById(eid);
+        if (cond) {
+            er.classList.remove('hidden');
+            el.classList.add('error');
+            v = false;
+        } else {
+            er.classList.add('hidden');
+            el.classList.remove('error');
+        }
+    }
+
+    const nameInput = document.getElementById('contact-name');
+    const emailInput = document.getElementById('contact-email');
+    const subjectInput = document.getElementById('contact-subject');
+    const messageInput = document.getElementById('contact-message');
+    const feedbackDiv = document.getElementById('form-feedback');
+
+    if (feedbackDiv) {
+        feedbackDiv.className = 'hidden text-sm text-center font-medium py-3 px-4 rounded-xl mt-4';
+        feedbackDiv.textContent = '';
+    }
+
+    chk('contact-name', 'name-error', !nameInput.value.trim());
+    chk('contact-email', 'email-error', !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim()));
+    chk('contact-subject', 'subject-error', !subjectInput.value);
+    chk('contact-message', 'message-error', messageInput.value.trim().length < 10);
+
+    const kv = document.getElementById('kvkk-consent'), ke = document.getElementById('kvkk-error');
+    if (!kv.checked) {
+        ke.classList.remove('hidden');
+        v = false;
+    } else {
+        ke.classList.add('hidden');
+    }
+
+    if (!v) return;
+
+    const btn = document.getElementById('submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const btnIcon = document.querySelector('#submit-btn .material-symbols-outlined');
+    const btnLoading = document.getElementById('btn-loading');
+
+    // Loading State
+    btnText.textContent = 'Gönderiliyor...';
+    btnIcon.classList.add('hidden');
+    btnLoading.classList.remove('hidden');
+    btn.disabled = true;
+
+    const params = new URLSearchParams();
+    params.append('name', nameInput.value.trim());
+    params.append('email', emailInput.value.trim());
+    params.append('subject', subjectInput.value);
+    params.append('message', messageInput.value.trim());
+
+    try {
+        // Google Apps Script POST isteklerinde CORS kısıtlaması nedeniyle response okunamaz.
+        // no-cors modu ile istek gönderilir; hata yoksa başarı kabul edilir.
+        await fetch(googleAppUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: params
+        });
+
+        // no-cors modunda response her zaman opaque döner, exception yoksa başarı kabul et
+        if (feedbackDiv) {
+            feedbackDiv.className = 'text-sm text-center font-medium py-3 px-4 rounded-xl mt-4 bg-green-100 text-green-800 border border-green-200';
+            feedbackDiv.textContent = 'Mesajınız başarıyla iletildi, en kısa sürede dönüş yapacağız.';
+        }
+        document.getElementById('contact-form').reset();
+        const counter = document.getElementById('char-count');
+        if (counter) counter.textContent = '0 / 1000';
+    } catch (error) {
+        console.error('Form gönderim hatası:', error);
+        if (feedbackDiv) {
+            feedbackDiv.className = 'text-sm text-center font-medium py-3 px-4 rounded-xl mt-4 bg-red-100 text-red-800 border border-red-200';
+            feedbackDiv.textContent = 'Bir bağlantı hatası oluştu, lütfen tekrar deneyin.';
+        }
+    } finally {
+        btn.disabled = false;
+        btnText.textContent = 'Mesajı Gönder';
+        btnIcon.classList.remove('hidden');
+        btnLoading.classList.add('hidden');
+    }
 });
-function resetForm(){
-const f=document.getElementById('contact-form');f.reset();f.classList.remove('hidden');
-document.getElementById('success-message').classList.add('hidden');
-const btn=document.getElementById('submit-btn');btn.disabled=false;
-document.getElementById('btn-text').classList.remove('hidden');
-document.querySelector('#submit-btn .material-symbols-outlined').classList.remove('hidden');
-document.getElementById('btn-loading').classList.add('hidden');
-document.getElementById('char-count').textContent='0 / 1000';
+
+function resetForm() {
+    const f = document.getElementById('contact-form');
+    f.reset();
+    f.classList.remove('hidden');
+    document.getElementById('success-message').classList.add('hidden');
+    const feedbackDiv = document.getElementById('form-feedback');
+    if (feedbackDiv) {
+        feedbackDiv.className = 'hidden text-sm text-center font-medium py-3 px-4 rounded-xl mt-4';
+        feedbackDiv.textContent = '';
+    }
+    const btn = document.getElementById('submit-btn');
+    btn.disabled = false;
+    document.getElementById('btn-text').textContent = 'Mesajı Gönder';
+    document.getElementById('btn-text').classList.remove('hidden');
+    document.querySelector('#submit-btn .material-symbols-outlined').classList.remove('hidden');
+    document.getElementById('btn-loading').classList.add('hidden');
+    document.getElementById('char-count').textContent = '0 / 1000';
 }
 </script>
 </body>

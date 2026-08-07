@@ -62,3 +62,14 @@
 - `iletisim.html` ve diğer sayfalardaki Türkçe karakter karmaşaları (I, i, ı, ü, ö, ş, ç) düzeltildi ve nav/footer bağlantıları standartlaştırıldı (`Uzmanlarımız`, `İletişim`, `Hakkımızda`, `Topluluğa Katıl`, vb.).
 
 
+### 07.08.2026 - 22:52 (TR)
+**Branch:** `feature/contact-form-apps-script`
+
+#### İletişim Formu — Google Apps Script Entegrasyonu
+- `iletisim.html` iletişim formuna Fetch API ile Google Apps Script `doPost` bağlantısı eklendi.
+- Form gönderiminde `e.preventDefault()` ile sayfa yenilenmesi engellendi.
+- Gönderim sırasında buton `disabled` yapılarak metni `"Gönderiliyor..."` olarak güncellendi; `finally` bloğu ile eski haline döndürüldü.
+- Form alanları (`name`, `email`, `subject`, `message`) `URLSearchParams` ile toplandı, `POST` metodu ve `mode: 'no-cors'` (CORS kısıtlası aşmak için) ile gönderildi. KVKK onay kutusu sadece HTML doğrulamasında kullanıldı, backend'e gönderilmedi.
+- Butonun altına `#form-feedback` div'i eklendi: başarıda yeşil, hatada kırmızı bildirim mesajı gösteriliyor.
+- Başarılı gönderimde form `reset()` ile temizlendi ve karakter sayacı sıfırlandı.
+- Google Apps Script endpoint URL'si `AKfycbypPza83s0RIzSEdX6_CGgBAEhXDl5Wo25FYUnsPGOO9adP1z5mVencRuhWmW8fSC-3Gw/exec` olarak güncellendi (yeni deployment).
