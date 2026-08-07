@@ -3,7 +3,8 @@ stitch_akranca_community_platform/
 
 # ── İç belgeler (ekip için, kamuya açık değil) ──────────────────────────────
 Docs/
-
+# ---- Komutlar
+Docs/commands/
 
 # ── Ortam ve gizli bilgiler ──────────────────────────────────────────────────
 .env
